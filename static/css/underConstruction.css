@@ -1,0 +1,30 @@
+
+/* UNDER-CONSTRUCTION CONFIG */
+#underConstruction
+{ 
+ position: 
+ relative; 
+ width:740px; 
+ height:350px; 
+ letter-spacing:-1px;
+ background-image:url(../images/background.png); 
+ background-repeat:repeat-y; 
+}
+
+#underConstruction .figure
+{ 
+ float:left; 
+ padding-left:130px; 
+ padding-top:50px; 
+}
+
+#underConstruction .text
+{ 
+ float:right; 
+ padding-right:150px; 
+ padding-top:150px; 
+ font-size:20px; 
+ color:black; 
+ text-decoration:blink; 
+}
+

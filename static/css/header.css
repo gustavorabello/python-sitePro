@@ -1,0 +1,36 @@
+
+/* HEADER CONFIG */
+#header
+{ 
+ margin-top:40px; 
+ height:111px; 
+ width:740px;
+ background-image:url(../images/header.png); 
+ background-repeat:no-repeat; 
+}
+
+#header h1
+{ 
+ position:relative; 
+ left:30px; 
+ top:30px; 
+ color:#F6F6F6; 
+ text-align:left;
+ font-size:40px; 
+ font-weight:bold; 
+ font-family:Arial, Helvetica, sans-serif; 
+}
+
+#header h2
+{ 
+ position:relative; 
+ left:33px; 
+ top:25px; 
+ color:FireBrick; 
+ text-align:left;
+ font-size:17px;
+ font-weight:bold;
+ font-family:Arial, Helvetica, sans-serif; 
+}
+
+

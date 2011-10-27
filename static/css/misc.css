@@ -1,0 +1,16 @@
+
+/* MISC - LIST CONFIG */
+#list
+{ 
+ width:650px; 
+ padding-top:30px; 
+ padding-left:60px; 
+ padding-right:30px;
+ font-size:25px; 
+ color:blue; 
+ line-height:30px; 
+ letter-spacing:-1px;
+ background-image:url(../images/background.png); 
+ background-repeat:repeat-y; 
+}
+

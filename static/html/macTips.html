@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.35">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">Change the hostname in Mac OS X:</p>
+<p class="p2"><br></p>
+<p class="p1">sudo scutil --set HostName canarinho</p>
+<p class="p1">(<a href="http://blog.psyrendust.com/2008/05/23/change-the-hostname-in-mac-os-x-osx/">http://blog.psyrendust.com/2008/05/23/change-the-hostname-in-mac-os-x-osx/</a>)</p>
+<p class="p2"><br></p>
+<p class="p1">Update locate database:</p>
+<p class="p2"><br></p>
+<p class="p1">sudo /usr/libexec/locate.updatedb</p>
+<p class="p1">(<a href="http://www.pakpoint.com/how-to-update-locate-database-for-mac-os-x-10-6-snow-leopard/12755/">http://www.pakpoint.com/how-to-update-locate-database-for-mac-os-x-10-6-snow-leopard/12755/</a>)</p>
+<p class="p2"><br></p>
+<p class="p1">Set up ssh key:</p>
+<p class="p2"><br></p>
+<p class="p1">ssh-keygen -t dsa</p>
+<p class="p1">(<a href="http://pkeck.myweb.uga.edu/ssh/">http://pkeck.myweb.uga.edu/ssh/</a>)</p>
+<p class="p2"><br></p>
+<p class="p1">Mac terminal font name:</p>
+<p class="p2"><br></p>
+<p class="p1">Menlo Regular 13 pt.</p>
+<p class="p2"><br></p>
+<p class="p1">spotlight on:</p>
+<p class="p1">sudo mdutil -a -i off</p>
+<p class="p2"><br></p>
+<p class="p1">spotlight off:</p>
+<p class="p1">sudo mdutil -a -i on</p>
+<p class="p2"><br></p>
+<p class="p1">vim (replace ˆM to newline)</p>
+<p class="p1">:set magic</p>
+<p class="p1">:%s/&lt;ctrl-V&gt;&lt;ctrl-M&gt;/\r/g</p>
+</body>
+</html>

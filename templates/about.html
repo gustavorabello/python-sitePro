@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>{% block title %}ANJOS's webpage{% endblock %}</title>
+<link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
+<link rel="shortcut icon" type="image/png" 
+href="{{ STATIC_URL }}images/guga.png">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/about.css">
+</head>
+<body>
+{% include "header.html" %}
+{% include "bar.html" %}
+
+<!-- ABOUT -->
+<div id="twoColumns">
+ <div class="left">
+
+  <img src="{{ STATIC_URL }}images/guga.png" border="1"> 
+
+  <h1> Some words: </h1>
+
+  <p>&nbsp;</p>
+
+  <p> I've been organizing this web page to make easy to you know a
+  little bit of my life and what I'm currently working on. Since 1st of
+  June, 2008 I'm working as Ph.D. student and assistant in the Heat and
+  Mass Transfer Laboratory (LTCM) at the Swiss Federal Institute of
+  Technology in Lausanne (EPFL). My research field is numerical
+  simulation of microscale two-phase flow. During my masters studies,
+  I'd been working in the discretization of the Navier-Stokes's
+  equations (single phase) through the Finite Element Method, using
+  Matlab and C/C++ as laboratory and code development respectivelly.
+  Thus, the extension of the code for two-phase flow modeling was a
+  natural path for its enhancement. </p>
+
+  <p>&nbsp;</p>
+  
+  <p> Talking about my personal life, I like to play sports. I enjoy to
+  play tennis, soccer, volleyball, basket, cycling and swimming. I also
+  like to play the acoustic guitar in my free time and record some funny
+  things with my computer webcam. </p>
+
+  <p>&nbsp;</p>
+
+  <p> So, enjoy my webpage and contact me if you need any further
+  information! :) </p>
+
+ </div>
+
+ <div class="right">
+
+  <h2> ABOUT ME: </h2>
+
+  <p>&nbsp;</p>
+
+  <p> <b> name: </b> Gustavo Rabello dos Anjos </p>
+  <p> <b> age: </b> 31 years old               </p>
+  <p> <b> birthday: </b> September 5th, 1980   </p>
+  <p> <b> high school: </b> <a href="http://portal.cefet-rj.br"> CEFET-RJ </a> </p>
+  <p> <b> B.Eng.: </b> <a href="http://www.uerj.br"> UERJ </a> </p>
+  <p> <b> M.Sc.: </b> <a href="http://www.ufrj.br"> UFRJ </a> </p>  
+  <p> <b> Ph.D.: </b> <a href="http://www.epfl.ch"> EPFL </a> </p>  
+  <p> <b> major: </b> Mechanical Engineer      </p>
+  <p> <b> languages: </b> portuguese, english, french, spanish </p>
+
+  <p>&nbsp;</p>
+
+  <p> <b> curriculum-Vitae: </b> 
+  <a href="http://lattes.cnpq.br/2430893976345647"> portugues</a>, 
+  <a href="{{ STATIC_URL }}pdf/cvEnglish.pdf"> english</a>,
+  <a href="{{ STATIC_URL }}pdf/cvFrancais.pdf"> francais</a> </p>
+
+  <p> <b> B.Eng. transcription grades: </b> 
+  <a href="{{ STATIC_URL }}pdf/uerjHistoricoPortugues.pdf"> portugues</a>, 
+  <a href="{{ STATIC_URL }}pdf/uerjGradesEnglish.pdf"> english</a> </p> 
+  <p> <b> M.Sc. transcription grades: </b> 
+  <a href="{{ STATIC_URL }}pdf/ufrjHistoricoPortugues.pdf"> portugues</a>, 
+  <a href="{{ STATIC_URL }}pdf/ufrjGradesEnglish.pdf"> english</a> </p> 
+
+  <p>&nbsp;</p>
+
+  <h2> RESEARCH INTERESTS: </h2>
+
+  <p>&nbsp;</p>
+
+  <ul>
+   <li> Multiphase Flow; </li>
+   <li> Heat Transfer; </li>
+   <li> Computational Fluid Dynamics; </li>
+   <li> Finite Element Method; </li>
+   <li> C/C++, Python, Matlab, Fortran </li>
+  </ul>
+
+  <p>&nbsp;</p>
+
+
+  <h2> MY CONTACT: </h2>
+
+  <p>&nbsp;</p>
+
+  <p> <b> address: </b>  EPFL-STI-IGM-LTCM </p>
+  <p style="text-indent:60px"> Bureau: ME G0 520 </p>
+  <p style="text-indent:60px"> Station 9 </p>
+  <p style="text-indent:60px"> CH-1015 Lausanne </p>
+  <p> <b> phone: </b> +41 21 6935442 </p>
+  <p> <b> fax: </b> +41 21 6935960 </p>
+
+  <p>&nbsp;</p>
+
+  <p> <b> skype: </b> gustavo.rabello </p>
+  <p> <b>  youtube: </b> gustavorabello </p>
+
+  <p>&nbsp;</p>
+
+  <h2> FAVORITE LINKS: </h2>
+
+  <p>&nbsp;</p>
+
+ <p> <a href="http://www.vim.org"> Vim editor </a> </p>
+ <p> <a href="http://www.python.org"> Python </a> </p>
+ <p> <a href="http://tetgen.berlios.de"> TETGEN </a> </p>
+ <p> <a href="http://www.paraview.org"> Paraview </a> </p>
+ <p> <a href="http://www.geuz.org/gmsh"> GMsh </a> </p>
+ <p> <a href="http://www.cff.ch"> Swiss Railway Company </a> </p>
+
+
+ </div>
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

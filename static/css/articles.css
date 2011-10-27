@@ -1,0 +1,83 @@
+
+/* ARTICLE CONFIG */
+#articleText
+{ 
+ width:680px; 
+ padding-top:30px; 
+ padding-left:30px; 
+ padding-right:30px;
+ font-size:13px; 
+ color:blue; 
+ letter-spacing:-1px;
+ background-image:url(../images/background.png); 
+ background-repeat:repeat-y; 
+}
+
+#articleText a
+{ 
+ color:white; 
+ font-family:Arial, Helvetica, sans-serif; 
+}
+
+#articleText table
+{ 
+ table-layout:fixed; 
+ width:680px; 
+ border:0px; 
+}
+
+#articleText .left
+{ 
+ float:left; 
+ padding-left:10px; 
+}
+
+#articleText .right
+{ 
+ float:right; 
+ padding-right:10px; 
+}
+
+#articleText .column1
+{ 
+ width:70px; 
+}
+
+#articleText .column2
+{ 
+ width:300px; 
+}
+
+#articleText .column3
+{ 
+ width:50px; 
+}
+
+#articleText td 
+{ 
+ text-align:center; 
+ color:Black; 
+ font-family:Arial, Helvetica, sans-serif; 
+}
+
+#articleText td:hover
+{ 
+ text-align:center; 
+ color:red; 
+ font-family:Arial, Helvetica, sans-serif; 
+}
+
+#articleText a:hover
+{ 
+ color:red; 
+}
+
+#articleText h1
+{ 
+ color:blue; 
+ font-size:30px; 
+ font-weight:bold; 
+ font-family:Arial, Helvetica, sans-serif; 
+ margin-top:20px; 
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.36">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><b># 1st commit</b></p>
+<p class="p1">git init</p>
+<p class="p1">git add .</p>
+<p class="p1">git commit -a -m "First import"</p>
+<p class="p2"><br></p>
+<p class="p1"><b># 1st checkout (clone from server)</b></p>
+<p class="p1">git clone guga@git.rabello.org:~/git/&lt;project&gt; &lt;project&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><b># commit</b></p>
+<p class="p1">cd &lt;project&gt;</p>
+<p class="p1">git add &lt;filename&gt;</p>
+<p class="p1">or</p>
+<p class="p1">git commit -a -m "text msg"</p>
+<p class="p2"><br></p>
+<p class="p1"><b># send changes to server</b></p>
+<p class="p1">git push</p>
+<p class="p2"><br></p>
+<p class="p1"><b># update version to be equal to the server</b></p>
+<p class="p1">git pull</p>
+<p class="p2"><br></p>
+<p class="p1"><b># add empty dir</b></p>
+<p class="p1">mkdir &lt;dir&gt;</p>
+<p class="p1">touch &lt;dir&gt;/.gitignore</p>
+<p class="p1">git add &lt;dir&gt;</p>
+<p class="p1">echo '*' &gt;&gt; &lt;dir&gt;/gitignore</p>
+<p class="p1">git commit -m "added empty dir" &lt;dir&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><b># creating and commiting</b></p>
+<p class="p1">cd &lt;dir&gt;</p>
+<p class="p1">git init</p>
+<p class="p1">git add &lt;filename&gt; or git add .</p>
+<p class="p1">git commit -m "First commit"</p>
+<p class="p2"><br></p>
+<p class="p1"><b># basic branching and merging</b></p>
+<p class="p1">git branch "name"</p>
+<p class="p1">git branch (list of branches)</p>
+<p class="p1">git checkout "name"</p>
+<p class="p2"><br></p>
+<p class="p1">(edit files)</p>
+<p class="p1">git commit -a</p>
+<p class="p2"><br></p>
+<p class="p1">git merge "name"</p>
+<p class="p2"><br></p>
+</body>
+</html>

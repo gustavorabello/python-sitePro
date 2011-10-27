@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.23">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">#!/home/guga/Programs/python/virtualenv/bin/python</p>
+<p class="p2"><br></p>
+<p class="p1"># ------------------------------------------------ #</p>
+<p class="p1"># - Place this file at your URL -<span class="Apple-converted-space">              </span>#</p>
+<p class="p1"># - Ex.: $HOME/gustavo.rabello.org <span class="Apple-converted-space">    </span>#</p>
+<p class="p1"># ------------------------------------------------ #</p>
+<p class="p2"><br></p>
+<p class="p1">import sys,os</p>
+<p class="p2"><br></p>
+<p class="p1">sys.path.insert(1, '/home/guga/projects/python')</p>
+<p class="p1">sys.path.insert(1, '/home/guga/projects/python/mysite')</p>
+<p class="p2"><br></p>
+<p class="p1">from flup.server.fcgi_fork import WSGIServer</p>
+<p class="p2"><br></p>
+<p class="p1">from django.core.handlers.wsgi import WSGIHandler</p>
+<p class="p1">os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'</p>
+<p class="p1">WSGIServer(WSGIHandler()).run()</p>
+</body>
+</html>

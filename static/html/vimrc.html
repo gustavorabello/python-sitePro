@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.23">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">" ####################################################################</p>
+<p class="p1">" #####<span class="Apple-converted-space">          </span>autor: <span class="Apple-converted-space">  </span>Gustavo Rabello dos Anjos <span class="Apple-converted-space">            </span>######</p>
+<p class="p1">" #####<span class="Apple-converted-space">          </span>e-mail:<span class="Apple-converted-space">  </span>gustavo.rabello@gmail.com <span class="Apple-converted-space">            </span>######</p>
+<p class="p1">" #####<span class="Apple-converted-space">          </span>webpage: http://rabello.homelinux.org<span class="Apple-converted-space">          </span>######</p>
+<p class="p1">" ####################################################################</p>
+<p class="p2"><br></p>
+<p class="p1">"................................................................PSEUDO-FUNCOES</p>
+<p class="p1">" Exemplo de mapeamentos para serem usados por outros mapeamentos,</p>
+<p class="p1">" para evitar repeticao de codigo, como seu email ou a data atual.</p>
+<p class="p1">" O caractere '' eh apenas um prefixo original para nao confundir<span class="Apple-converted-space"> </span></p>
+<p class="p1">" com texto. Para ler variaveis de ambiente faca:<span class="Apple-converted-space"> </span></p>
+<p class="p1">" imap E &lt;esc&gt;:r! echo $VAR&lt;cr&gt;kJA</p>
+<p class="p2"><br></p>
+<p class="p1">"set encoding=iso8859-1</p>
+<p class="p1">"set fileencoding=iso8859-15</p>
+<p class="p1">setlocal encoding=utf-8 "igual a config de -locale-</p>
+<p class="p1">setlocal fileencodings=latin1,utf-8 "acentos nos PDFs compilados</p>
+<p class="p2"><br></p>
+<p class="p1">imap nome Gustavo Rabello dos Anjos</p>
+<p class="p1">imap web http://adois.org/guga</p>
+<p class="p1">imap e-mail: gustavo.rabello@gmail.com</p>
+<p class="p1">imap data &lt;esc&gt;:r!date '+\%d-\%m-\%Y'&lt;cr&gt;kJA</p>
+<p class="p2"><br></p>
+<p class="p1">".........................................................................INFO</p>
+<p class="p1">" Guarda posicao do cursor e historico da linha de comando :</p>
+<p class="p1">set viminfo='10,\"30,:40,%,n~/.viminfo</p>
+<p class="p1">au BufReadPost * if line("'\"")|execute("normal `\"")|endif</p>
+<p class="p2"><br></p>
+<p class="p1">"......................................................................LIMPEZA</p>
+<p class="p1">" MostraTab: mostra TAB no inicio e espacos no fim das linhas</p>
+<p class="p1">map ,mt /^\t\+\\|\s\+$&lt;cr&gt;</p>
+<p class="p1">" PalavrasRepetidas: procura palavras repetidas no texto</p>
+<p class="p1">map ,pr /\&lt;\(\w*\) \1\&gt;&lt;cr&gt;</p>
+<p class="p1">" MinusculasMaiusculas: converte a primeira letra de cada frase p/MAIUSCULAS</p>
+<p class="p1">map ,mm :set noic&lt;cr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>\:%s/\(\(\([.!?]\s*\\|^\s*\)\n^\\|[.?!-] \)\s*"\?\s*\)\([a-z]\)/\1\U\4/cg&lt;cr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">"......................................................................ARQUIVO</p>
+<p class="p1">cab W w | cab Q q | cab Wq wq | cab wQ wq | cab WQ wq</p>
+<p class="p1">cab Waq waq | cab WAQ waq | cab WAq waq | cab Wa wa | cab WA wa<span class="Apple-converted-space"> </span></p>
+<p class="p1">cab Qa qa | cab QA qa</p>
+<p class="p2"><br></p>
+<p class="p1">".......................................................................OUTROS</p>
+<p class="p1">" Alterna entre janelas sem sair do modo insercao (depois do :split)</p>
+<p class="p1">imap &lt;F4&gt; &lt;esc&gt;&lt;c-w&gt;&lt;c-w&gt;i</p>
+<p class="p1">" DiffApaga: apagar uma entrada num arquivao DIFF</p>
+<p class="p1">"map ,di :.,/diff -[uNr]/-d&lt;cr&gt;</p>
+<p class="p1">" HtmlSyntaxe: carregar uma sintaxe HTML alternativa<span class="Apple-converted-space"> </span></p>
+<p class="p1">"map ,hs :so ~/.vim/synload.vim&lt;cr&gt;:so ~/.vim/html.vim&lt;cr&gt;</p>
+<p class="p1">" HtmlData: atualiza data no fim do arquivo HTML</p>
+<p class="p1">map ,hd G:?^$&lt;cr&gt;O&lt;pre&gt;&lt;cr&gt;--&lt;cr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>\D U&lt;esc&gt;:r!echo ${PWD\#*/html}/%&lt;cr&gt;kJxo&lt;/pre&gt;</p>
+<p class="p1">" Para 'ocultar' e voltar os comentarios do arquivo atual</p>
+<p class="p1">noremap &lt;F2&gt; :hi Comment ctermfg=black guifg=black&lt;cr&gt;</p>
+<p class="p1">noremap &lt;F3&gt; :hi Comment term=bold ctermfg=cyan guifg=cyan&lt;cr&gt;</p>
+<p class="p1">" Busca colorida em verde</p>
+<p class="p1">hi<span class="Apple-converted-space">    </span>Search ctermbg=green ctermfg=black</p>
+<p class="p1">hi IncSearch ctermbg=black ctermfg=cyan</p>
+<p class="p2"><br></p>
+<p class="p1">"................................................................OPCOES DO SET</p>
+<p class="p1">"(IncrementedSearch, HighLightedSearch, IgnoreCase, SmartCaSe)</p>
+<p class="p1">set ic scs magic<span class="Apple-converted-space">    </span>"opcoes espertas de busca</p>
+<p class="p1">set hls is<span class="Apple-converted-space">          </span>"mostra linha em branco com 1 quadrado verde</p>
+<p class="p1">set sm<span class="Apple-converted-space">              </span>"ShowMatch: mostra o par do parenteses/chaves recem fechado</p>
+<p class="p1">set hid <span class="Apple-converted-space">            </span>"HIDden: nao lembro pra que servia mas era massa</p>
+<p class="p1">set aw<span class="Apple-converted-space">              </span>"AutoWrite: gravacao automatica a cada alteracao</p>
+<p class="p1">set ai<span class="Apple-converted-space">              </span>"AutoIndent: identacao automatica</p>
+<p class="p1">set ts=4<span class="Apple-converted-space">            </span>"TabStop: numero de caracteres de avanco do TAB</p>
+<p class="p1">set report=0<span class="Apple-converted-space">        </span>"reporta acoes com linhas</p>
+<p class="p1">set shm=filmnrwxt <span class="Apple-converted-space">  </span>"SHortMessages: encurta as mensagem do rodape</p>
+<p class="p1">"set et<span class="Apple-converted-space">              </span>"ExpandTab: troca TABs por espacos</p>
+<p class="p1">"retab <span class="Apple-converted-space">              </span>"converter os TABs ja existentes</p>
+<p class="p1">set ruler <span class="Apple-converted-space">          </span>"mostra a posicao do cursor, regua</p>
+<p class="p1">"set showcmd <span class="Apple-converted-space">        </span>"mostra o comando sendo executado</p>
+<p class="p1">set laststatus=2<span class="Apple-converted-space">    </span>"mostra N linhas de estado (status)</p>
+<p class="p1">set textwidth=72<span class="Apple-converted-space">    </span>"quebra de linha</p>
+<p class="p1">set bs=2<span class="Apple-converted-space">            </span>"comportamento do backspace</p>
+<p class="p1">set nosmartindent <span class="Apple-converted-space">  </span>"desligando pois esta padrao no CL40</p>
+<p class="p1">set visualbell<span class="Apple-converted-space">      </span>"pisca a tela ao inves de bipar</p>
+<p class="p1">set wrap<span class="Apple-converted-space">            </span>"forca a quebra de linha</p>
+<p class="p1">set nojoinspaces<span class="Apple-converted-space">    </span>"! coloca 2 espacos apos o . quando usando o gq</p>
+<p class="p1">set sw=1<span class="Apple-converted-space">            </span>"numero de colunas para o comando &gt; (ShiftWidth)</p>
+<p class="p1">set wildmode=longest,list:full<span class="Apple-converted-space">  </span>"para completacao do TAB igual bash</p>
+<p class="p1">set mouse=a<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>"ativa o mouse em terminal</p>
+<p class="p1">"set bk<span class="Apple-converted-space">              </span>"ativa backup de arquivo. ex. .vimrc -&gt; .vimrc~</p>
+<p class="p1">set wildignore=*.o,*.obj,*.exe<span class="Apple-converted-space">  </span>"arquivos ignorados pelo editor</p>
+<p class="p1">setlocal hi=5000<span class="Apple-converted-space">    </span>"define numero max de linhas do historico</p>
+<p class="p2"><br></p>
+<p class="p1">"........................................................................CORES</p>
+<p class="p1">" Cores no terminal com a sintaxe</p>
+<p class="p1">set background=dark <span class="Apple-converted-space">    </span>"eh importante o bg estar ANTES do terminfo</p>
+<p class="p1">syntax on <span class="Apple-converted-space">              </span>"ligando a sintaxe colorida</p>
+<p class="p1">filetype indent on</p>
+<p class="p1">highlight StatusLine ctermfg=red ctermbg=white "colore barra de status<span class="Apple-converted-space"> </span></p>
+<p class="p1">highlight StatusLineNC ctermfg=white ctermbg=red "colore barra de status BG<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">".........................................................COMANDOS AUTOMATICOS</p>
+<p class="p2"><br></p>
+<p class="p1">" Arquivos .sh sao sempre bash, e nao sh</p>
+<p class="p1">au FileType sh let b:is_bash=1</p>
+<p class="p2"><br></p>
+<p class="p1">" Palavras-chave para destacar em qualquer tipo de arquivo</p>
+<p class="p1">syn case ignore</p>
+<p class="p1">syn keyword p_c gustavo rabello anjos</p>
+<p class="p1">syn keyword p_c latex</p>
+<p class="p1">syn keyword p_c gesar uerj</p>
+<p class="p1">syn keyword p_c ufrj</p>
+<p class="p1">syn keyword p_c vi vim emacs xemacs bash python c c++ cww</p>
+<p class="p1">hi p_c ctermbg=white ctermfg=black</p>
+<p class="p2"><br></p>
+<p class="p1">" Man: Paginas de manual sao na verdade textos em NROFF<span class="Apple-converted-space"> </span></p>
+<p class="p1">au BufNewFile,BufRead *.man set ft=nroff</p>
+<p class="p2"><br></p>
+<p class="p1">" Python: TAB colorido e outras configuracoes</p>
+<p class="p1">au FileType python set ts=4 tw=80 noet</p>
+<p class="p1">au FileType python syn match pythonTAB '\t\+'</p>
+<p class="p1">au FileType python hi pythonTAB ctermbg=blue</p>
+<p class="p1">au FileType python hi pythonString ctermfg=lightgreen</p>
+<p class="p1">au FileType python hi pythonRawString ctermfg=lightgreen</p>
+<p class="p2"><br></p>
+<p class="p1">" Makefile: ele adora usar linhas compridas malas</p>
+<p class="p1">au BufNewFile,BufRead Makefile set tw=0</p>
+<p class="p2"><br></p>
+<p class="p1">" Coluna personalizada: quebrar sempre em 72 colunas</p>
+<p class="p1">au BufNewFile,BufRead coluna??.txt set tw=72</p>
+<p class="p2"><br></p>
+<p class="p1">" Folding: folding automatico<span class="Apple-converted-space"> </span></p>
+<p class="p1">au BufWrite * mkview</p>
+<p class="p1">au BufRead * silent loadview<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">" ..............................................................VIM-LATEXSUITE</p>
+<p class="p1">filetype plugin on</p>
+<p class="p1">set grepprg=grep\ -nH\ $*</p>
+<p class="p1">imap &lt;C-b&gt; &lt;Plug&gt;Tex_MathBF</p>
+<p class="p1">imap &lt;C-c&gt; &lt;Plug&gt;Tex_MathCal</p>
+<p class="p1">imap &lt;C-l&gt; &lt;Plug&gt;Tex_LeftRight</p>
+<p class="p1">imap &lt;buffer&gt; &lt;leader&gt;it &lt;Plug&gt;Tex_InsertItemOnThisLine</p>
+<p class="p2"><br></p>
+<p class="p1">".........................................................................MISC</p>
+<p class="p1">" Mostra os espacos em branco inuteis no final da linha</p>
+<p class="p1">syn match brancomala '\s\+$' | hi brancomala ctermbg=red</p>
+<p class="p1">" Esconder as tags HTML (pintando de preto)</p>
+<p class="p1">map ,hh :syn match preto '&lt;.\{-}&gt;' &lt;cr&gt;:hi preto ctermfg=black ctermbg=blue&lt;cr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">"....................................................................IMPRESSAO</p>
+<p class="p1">set printoptions=left:10pc,right:5pc,top:5pc,bottom:5pc</p>
+<p class="p1">set printoptions=syntax:y</p>
+<p class="p1">set printoptions=number:y</p>
+<p class="p1">set printoptions=portrait:y</p>
+<p class="p1">set printoptions=paper:A4</p>
+<p class="p2"><br></p>
+<p class="p1">"...............................................................TAB PROPERTIES</p>
+<p class="p1">"set showtabline=2<span class="Apple-converted-space">  </span>" mostra a linha de tab, encontrada na parte superior</p>
+<p class="p1">set tabpagemax=15 " define numero maximo de tabs</p>
+<p class="p1">nnoremap &lt;silent&gt; &lt;C-t&gt; :tabnew&lt;CR&gt;</p>
+<p class="p1">nnoremap &lt;silent&gt; &lt;C-n&gt; :tabnext&lt;CR&gt;</p>
+<p class="p1">nnoremap &lt;silent&gt; &lt;C-p&gt; :tabprevious&lt;CR&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">"...........................................................TAB AUTOCOMPLETION</p>
+<p class="p1">fun! InsertTabWrapper()</p>
+<p class="p1"><span class="Apple-converted-space"> </span>let col = col('.') - 1</p>
+<p class="p1"><span class="Apple-converted-space"> </span>if !col || getline('.')[col - 1] !~ '\k'</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return "\&lt;tab&gt;"</p>
+<p class="p1"><span class="Apple-converted-space"> </span>else</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return "\&lt;c-p&gt;"</p>
+<p class="p1"><span class="Apple-converted-space"> </span>endif</p>
+<p class="p1">endfun</p>
+<p class="p2"><br></p>
+<p class="p1">fun! ShiftInsertTabWrapper()</p>
+<p class="p1"><span class="Apple-converted-space"> </span>let col = col('.') - 1</p>
+<p class="p1"><span class="Apple-converted-space"> </span>if !col || getline('.')[col - 1] !~ '\k'</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return "\&lt;s-tab&gt;"</p>
+<p class="p1"><span class="Apple-converted-space"> </span>else</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return "\&lt;c-n&gt;"</p>
+<p class="p1"><span class="Apple-converted-space"> </span>endif</p>
+<p class="p1">endfun</p>
+<p class="p2"><br></p>
+<p class="p1">inoremap &lt;tab&gt; &lt;c-r&gt;=InsertTabWrapper()&lt;cr&gt;</p>
+<p class="p1">inoremap &lt;s-tab&gt; &lt;c-r&gt;=ShiftInsertTabWrapper()&lt;cr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">"...........................................................AUTO SPELLING</p>
+<p class="p1">" ]s - move to the next mispelled word</p>
+<p class="p1">" [s - move to the previous mispelled word</p>
+<p class="p1">" zg - add a word to the dictionary</p>
+<p class="p1">" zug - undo the addition of a aword to the dictionary</p>
+<p class="p1">" z= - view spelling suggestions for a mispelled word</p>
+<p class="p1">"</p>
+<p class="p1">"set spelllang=en</p>
+<p class="p1">"set spell</p>
+<p class="p2"><br></p>
+<p class="p1">".................................................................MACVIM PROPS</p>
+<p class="p1">"set lines=40</p>
+<p class="p1">"set co=80</p>
+<p class="p2"><br></p>
+<p class="p1">".........................................................................GMSH</p>
+<p class="p1">" GMSH (Meshing Facilities)</p>
+<p class="p1">augroup filetypedetect</p>
+<p class="p1">au BufNewFile,BufRead *.geo setf gmsh</p>
+<p class="p1">augroup END</p>
+<p class="p2"><br></p>
+</body>
+</html>
