@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="generator" content="HTML::TextToHTML v2.51"/>
+</head>
+<body>
+ <p>define $ENV <br/>
+export ENV = $HOME/Programs/python/env </p>
+
+<p>download virtualenv <br/>
+python virtualenv $ENV </p>
+
+<p>download django <br/>
+$ENV/bin/python setup.py install </p>
+
+<p>create new django project or upload yours: </br>
+$ENV/bin/django-admin.py startproject mysite </br>
+chmod 600 mysite/settings.py </p>
+
+<p>Follow the config at: <br/>
+<a href="http://wiki.dreamhost.com/Django_FastCGI">http://wiki.dreamhost.com/Django_FastCGI</a> </p>
+
+<p>install Flup <br/>
+$ENV/bin/easy_install Flup </p>
+
+<p>At gustavo.rabello.org folder add: </p>
+
+<h1><a name="section_1">dispatch.fcgi</a></h1>
+
+<hr/>
+
+<p>#!/home/guga/dynamic-site/env/bin/python </br>
+import sys</br>
+sys.path.insert(1, '/home/guga/projects/python/') </br>
+sys.path.insert(1, '/home/guga/projects/python/mysite') </br>
+from flup.server.fcgi_fork import WSGIServer </br>
+from django.core.handlers.wsgi import WSGIHandler import os</br>
+os.environ['DJANGO_SETTINGS_MODULE'] = 'sitePro.settings'
+WSGIServer(WSGIHandler()).run() </p>
+
+<hr/>
+
+<h1><a name="section_2">.htaccess</a></h1>
+
+<hr/>
+
+<p>RewriteEngine On</br>
+RewriteBase /</br>
+RewriteRule ^(dispatch\.fcgi/.*)$ - [L] </br>
+RewriteRule ^(.*)$ dispatch.fcgi/$1 - [L] </p>
+
+<hr/>
+
+</body>
+</html>
