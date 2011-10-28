@@ -6,7 +6,6 @@
  relative; 
  width:740px; 
  height:350px; 
- letter-spacing:-1px;
  background-image:url(../images/background.png); 
  background-repeat:repeat-y; 
 }
@@ -14,17 +13,24 @@
 #underConstruction .figure
 { 
  float:left; 
- padding-left:130px; 
+ padding-left:100px; 
  padding-top:50px; 
+ width:35%;
 }
 
 #underConstruction .text
 { 
  float:right; 
- padding-right:150px; 
- padding-top:150px; 
- font-size:20px; 
+ padding-top:140px;
+ padding-right:140px;
+ font-family:"Courier New",Courier,monospace;
+ font-size:30px; 
  color:black; 
  text-decoration:blink; 
 }
 
+#underConstruction p
+{
+ text-align:center;
+ letter-spacing:-3px;
+}

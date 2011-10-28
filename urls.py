@@ -11,8 +11,8 @@ urlpatterns = patterns('',
     (r'^research/', include('research.urls')),
     (r'^articles/', include('articles.urls')),
     (r'^misc/', include('misc.urls')),
-    #(r'^images/', include('images.urls')),
-    #(r'^videos/', include('videos.urls')),
+    (r'^images/', include('images.urls')),
+    (r'^videos/', include('videos.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
 )

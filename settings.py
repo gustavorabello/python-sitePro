@@ -62,7 +62,8 @@ STATIC_ROOT = ' '
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'http://misc.rabello.org/static/'
+STATIC_URL = '/static/'
+#STATIC_URL = 'http://misc.rabello.org/static/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
@@ -104,7 +105,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'sitePro.urls'
 
 # creating default rendering context
-#WEB = u"http://gustavo.rabello.org"
 WEB_WORK = u"http://ltcm.epfl.ch"
 WEB_PERSONAL = u"http://gustavo.rabello.org"
 EMAIL = u"gustavo.rabello@gmail.com"

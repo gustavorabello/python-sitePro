@@ -1,11 +1,11 @@
 
 /* MISC - LIST CONFIG */
+
 #list
 { 
- width:650px; 
- padding-top:30px; 
- padding-left:60px; 
- padding-right:30px;
+ padding-top:20px;
+ padding-bottom:20px;
+ width:740px; 
  font-size:25px; 
  color:blue; 
  line-height:30px; 
@@ -14,3 +14,16 @@
  background-repeat:repeat-y; 
 }
 
+#list li
+{ 
+ padding-left:50px;
+}
+
+#list a
+{ 
+ text-align:center;
+ letter-spacing:-3px;
+ font-size:25px; 
+ color:black; 
+ letter-spacing:-1px;
+}

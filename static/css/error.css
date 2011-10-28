@@ -1,0 +1,22 @@
+
+/* UNDER-CONSTRUCTION CONFIG */
+#error
+{ 
+ position:relative; 
+ width:740px; 
+ height:250px; 
+ letter-spacing:-1px;
+ background-image:url(../images/background.png); 
+ background-repeat:repeat-y; 
+}
+
+#error p
+{ 
+ padding-top:110px;
+ text-align:center;
+ letter-spacing:-3px;
+ font-family:"Courier New",Courier,monospace;
+ font-size:40px; 
+ color:black; 
+}
+

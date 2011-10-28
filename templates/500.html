@@ -5,13 +5,17 @@
 <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
 <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
-<link rel="stylesheet" href="{{ STATIC_URL }}css/underConstruction.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/error.css">
 </head>
 <body>
 {% include "header.html" %}
 {% include "bar.html" %}
 
-{% include "underConstruction.html" %}
+<div id="error">
+
+ <p> INTERNAL SERVER ERROR </p>
+
+</div>
 
 {% include "footer.html" %}
 </body>
