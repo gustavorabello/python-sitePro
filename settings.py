@@ -1,7 +1,15 @@
 # Django settings for sitePro project.
-import os, datetime
+import os, datetime,socket
 
-DEBUG = TEMPLATE_DEBUG = False
+# URL prefix for static files,
+# set DEBUG mode
+if socket.gethostname() == 'alkalurops':
+ STATIC_URL = 'http://misc.rabello.org/static/'
+ DEBUG = TEMPLATE_DEBUG = False
+else:
+ STATIC_URL = '/static/'
+ DEBUG = TEMPLATE_DEBUG = True 
+
 ROOT_PATH = os.path.dirname(__file__)
 
 ADMINS = (
@@ -59,11 +67,6 @@ MEDIA_URL = '/media/'
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = ' ' 
 #STATIC_ROOT = os.path.join(ROOT_PATH,'static')
-
-# URL prefix for static files.
-# Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
-#STATIC_URL = 'http://misc.rabello.org/static/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
