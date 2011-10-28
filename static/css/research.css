@@ -8,7 +8,7 @@
  padding-bottom:20px;
  padding-left:30px; 
  padding-right:30px;
- height:1500px;
+ height:1530px;
  font-size:13px; 
  color:black; 
  letter-spacing:0px;
@@ -69,6 +69,8 @@
 
 #twoColumns .right
 { 
+ padding-top:30px;
+ padding-bottom:10px;
  float:right;
  width:52%;
  height:auto 
