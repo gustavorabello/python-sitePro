@@ -3,19 +3,29 @@
 <head>
 <title>{% block title %}ANJOS's webpage{% endblock %}</title>
 <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
-<link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
+<link rel="shortcut icon" type="image/png" 
+href="{{ STATIC_URL }}images/guga.png">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
-<link rel="stylesheet" href="{{ STATIC_URL }}css/underConstruction.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/about.css">
 </head>
 <body>
 {% include "header.html" %}
 {% include "bar.html" %}
 
-<div id="base">
+<div id="page">
 
- <p> Write your text at here! </p>
+{% if latest_poll_list %}
+<ul>
+ {% for poll in latest_poll_list %}
+ <li><a href="/musics/{{ poll.id }}/">{{ poll.question}}</a></li>
+ {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
 
 </div>
+
 
 {% include "footer.html" %}
 </body>

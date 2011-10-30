@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>{% block title %}ANJOS's webpage{% endblock %}</title>
+<link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
+<link rel="shortcut icon" type="image/png" 
+href="{{ STATIC_URL }}images/guga.png">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/about.css">
+</head>
+<body>
+{% include "header.html" %}
+{% include "bar.html" %}
+
+<div id="page">
+
+ {% if music_list %}
+ <ul>
+  {% for music in music_list %}
+  <li> {{ music.artist }} {{ music.song }} {{ music.year }} </li>
+  <li><a href="/musics/{{ music.artist }}/">{{ music.song }}</a></li>
+  {% endfor %}
+ </ul>
+ {% else %}
+ <p>No polls are available.</p>
+ {% endif %}
+
+</div>
+
+
+{% include "footer.html" %}
+</body>
+</html>

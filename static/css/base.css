@@ -1,0 +1,17 @@
+
+/* BASE CONFIG */
+#base
+{ 
+ position: 
+ relative; 
+ width:740px; 
+ height:350px; 
+ background-image:url(../images/background.png); 
+ background-repeat:repeat-y; 
+}
+
+#base p
+{
+ text-align:center;
+ letter-spacing:-3px;
+}

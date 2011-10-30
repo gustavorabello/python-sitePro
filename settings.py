@@ -65,8 +65,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ' ' 
-#STATIC_ROOT = os.path.join(ROOT_PATH,'static')
+STATIC_ROOT = os.path.join(ROOT_PATH,'deploy/static')
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
@@ -133,7 +132,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 # setting up working directory paths
 TEMPLATE_DIRS = (
-    os.path.join(ROOT_PATH,'templates')
+    os.path.join(ROOT_PATH,'templates'),
 )
 
 INSTALLED_APPS = (
@@ -156,6 +155,7 @@ INSTALLED_APPS = (
     'misc',
     'images',
     'videos',
+    'musics',
 )
 
 # A sample logging configuration. The only tangible logging

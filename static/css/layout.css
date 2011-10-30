@@ -13,13 +13,22 @@ html, body
 { text-align: center; }
 
 p 
-{ text-align: left; }
+{ 
+ text-align: left; 
+}
 
 a
-{ text-decoration:none; color:#2A2A2A; border-bottom:1px; }
+{ 
+ text-decoration:none; 
+ color:#2A2A2A; 
+ border-bottom:1px; 
+}
 
 a:hover
-{ color:red; border-bottom:1px; }
+{ 
+ color:red; 
+ border-bottom:1px; 
+}
 
 body 
 { margin: 0; padding: 0; background: #697281; text-align: left;
@@ -49,13 +58,36 @@ body
 
 /* PAGE CONFIG */
 #page
-{ margin: 0 auto 0 auto;  margin-top:0px; display:block;  height:400px;
-  position:relative; overflow:hidden; width:740px;
-  background:url(../images/background.png) repeat-y; }
+{ 
+ margin: 0 auto 0 auto;  
+ margin-top:0px; 
+ padding-top:200px;
+ display:block;  
+ height:300px;
+ position:relative; 
+ overflow:hidden; 
+ width:740px;
+ background:url(../images/background.png) repeat-y; 
+}
+
+#page p
+{
+ color:red;
+ font-size:30px; 
+ font-family:Arial, Helvetica, sans-serif; 
+ text-align:center;
+ letter-spacing:-1px;
+}
 
 #page h1
-{ position:relative; left:110px; top:180px; 
-  font-size:40px; font-weight:bold; color:red;
-  font-family:Arial, Helvetica, sans-serif; }
+{ 
+ position:relative; 
+ left:110px; 
+ top:180px; 
+ font-size:40px; 
+ font-weight:bold; 
+ color:red;
+ font-family:Arial, Helvetica, sans-serif; 
+}
 
 

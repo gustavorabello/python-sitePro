@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     (r'^misc/', include('misc.urls')),
     (r'^images/', include('images.urls')),
     (r'^videos/', include('videos.urls')),
+    (r'^musics/', include('musics.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
 )
