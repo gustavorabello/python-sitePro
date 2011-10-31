@@ -7,7 +7,7 @@ if socket.gethostname() == 'alkalurops':
  STATIC_URL = 'http://misc.rabello.org/static/'
  DEBUG = TEMPLATE_DEBUG = False
 else:
- STATIC_URL = '/static/'
+ STATIC_URL = '/deploy/static/'
  DEBUG = TEMPLATE_DEBUG = True
 
 ROOT_PATH = os.path.dirname(__file__)
