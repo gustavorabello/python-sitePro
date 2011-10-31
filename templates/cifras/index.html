@@ -14,14 +14,14 @@ href="{{ STATIC_URL }}images/guga.png">
 
 <div id="twoColumns">
 
- {% regroup music_list|dictsort:"artist" by artist as m_list %}
+ {% regroup music_list|dictsort:"artist" by artist as artist_list %}
 
  <ul>
-  {% for artist in m_list %}
+  {% for artist in artist_list %}
   <h1> {{ artist.grouper }} 
   <ul>
    {% for item in artist.list %}
-   <li><a href="{{ STATIC_URL }}cifras/{{ artist.grouper }}/{{ item.filename }}"> 
+   <li><a href="{{ STATIC_URL }}cifras/{{ item.artistdir }}/{{ item.filename }}"> 
 	{{ item.song }}</a></li>
    {% endfor %}
   </ul>

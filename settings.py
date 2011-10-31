@@ -11,6 +11,14 @@ else:
  DEBUG = TEMPLATE_DEBUG = True
 
 ROOT_PATH = os.path.dirname(__file__)
+DEPLOY_DIR = os.path.join(ROOT_PATH,'deploy')
+STATIC_DIR = os.path.join(ROOT_PATH,'static')
+CSS_DIR = os.path.join(STATIC_DIR,'css')
+IMAGE_DIR = os.path.join(STATIC_DIR,'images')
+PDF_DIR = os.path.join(STATIC_DIR,'pdf')
+PPT_DIR = os.path.join(STATIC_DIR,'ppt')
+HTML_DIR = os.path.join(STATIC_DIR,'html')
+CIFRAS_DIR = os.path.join(STATIC_DIR,'cifras')
 
 ADMINS = (
     # ('Gustavo ANJOS', 'gustavo.rabello@gmail.com'),
@@ -107,6 +115,14 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'sitePro.urls'
 
 # creating default rendering context
+# and setting up some helpful values
+STATIC_URL_FORMAT = u"/static/%s"
+STATIC_THUMBNAIL_FORMAT = STATIC_URL_FORMAT % u"thumbs/%s"
+STATIC_IMAGE_FORMAT = STATIC_URL_FORMAT % u"images/%s"
+THUMBNAIL_SIZE16  = (16,16)
+THUMBNAIL_SIZE32  = (32,32)
+THUMBNAIL_SIZE64  = (64,64)
+THUMBNAIL_SIZE128 = (128,128)
 WEB_WORK = u"http://ltcm.epfl.ch"
 WEB_PERSONAL = u"http://gustavo.rabello.org"
 EMAIL = u"gustavo.rabello@gmail.com"
