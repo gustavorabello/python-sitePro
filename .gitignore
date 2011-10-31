@@ -1,3 +1,4 @@
 *.pyc
 *.swp
 deploy
+.DS_Store

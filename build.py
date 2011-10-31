@@ -4,19 +4,30 @@
 #  e-mail: gustavo.rabello@gmail.com                                    #
 ## =================================================================== ##
 
-import os 
+import os,fnmatch,re
 from django.conf import settings
 
 os.environ['DJANGO_SETTINGS_MODULE'] = u"settings"
 
 from musics.models import Music
 
-m = Music(artist='toquinho',song='regra tres',year=1967)
-m.save()
-m = Music(artist='toquinho',song='testamento',year=1968)
-m.save()
-m = Music(artist='baden powell',song='berimbau',year=1962)
-m.save()
+dirname = 'musics/'
 
+for artistname in os.listdir(dirname):
+ if os.path.isdir(os.path.join('musics/', artistname)):
+  for infile in os.listdir(dirname+artistname):
+   if fnmatch.fnmatch(infile, '*.html'): 
+    basename = os.path.splitext(infile)[0]
+    splitsongname = re.sub(r'(?<=.)([A-Z])', r' \1', basename).split()
 
+    songname=''
+    for name in splitsongname:
+     songname += name.title() + " "
+
+    m = Music(filename=infile,
+              artist=artistname,
+              song=songname,
+              year=1967)
+    print infile, artistname, songname, 1967
+    m.save()
 

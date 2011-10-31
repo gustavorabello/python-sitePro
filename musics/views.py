@@ -7,12 +7,18 @@ from django.template import RequestContext
 from django.http import HttpResponse,Http404
 
 def index(request):
- return render_to_response('cifras/index.html',
-                           context_instance=RequestContext(request,settings.CONTEXT))
-
-def detail(request, music_id):
- #m = get_object_or_404(Music, pk=music_id)
  m = Music.objects.all()
- return render_to_response('cifras/regraTres.html',{'music_list':m})
+ return render_to_response('cifras/index.html',
+                           {
+                            'music_list':m,
+                           },
+                           context_instance=
+                           RequestContext(request,settings.CONTEXT))
+
+
+def detail(request,artist_id,song_id):
+ return render_to_response('musics/'+artist_id+'/'+song_id,
+                           context_instance=
+                           RequestContext(request,settings.CONTEXT))
 
                            

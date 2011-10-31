@@ -14,16 +14,16 @@ href="{{ STATIC_URL }}images/guga.png">
 
 <div id="page">
 
- {% if music_list %}
- <ul>
-  {% for music in music_list %}
-  <li> {{ music.artist }} {{ music.song }} {{ music.year }} </li>
-  <li><a href="/musics/{{ music.artist }}/">{{ music.song }}</a></li>
-  {% endfor %}
- </ul>
- {% else %}
- <p>No polls are available.</p>
- {% endif %}
+{% if music_list %}
+<ul>
+ {% for music in music_list %}
+ <li><a href="/musics/{{ music.artist }}/{{ music.filename }}"> 
+  {{ music.song }}</a></li>
+ {% endfor %}
+</ul>
+{% else %}
+<p>No musics are available.</p>
+{% endif %}
 
 </div>
 
