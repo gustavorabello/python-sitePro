@@ -1,0 +1,47 @@
+
+/* VIDEOS - EXTENSION OF 2 COLUMN LAYOUT */
+#twoColumns
+{ 
+ height:1050px;
+}
+
+#twoColumns h1 
+{ 
+ padding-bottom:10px;
+ color:blue; 
+}
+
+#twoColumns h2
+{ 
+}
+
+#twoColumns p 
+{ 
+ margin-top:60px;
+ width:95%;
+}
+
+#twoColumns .block
+{ 
+ width:640px;
+ height:350px;
+}
+
+#twoColumns .left
+{ 
+ float:left;
+ width:48%;
+ vertical-align:middle;
+ text-align:center;
+}
+
+#twoColumns .right
+{ 
+ float:right;
+ width:48%;
+ vertical-align:middle;
+ text-align:center;
+}
+
+
+

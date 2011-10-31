@@ -1,0 +1,55 @@
+
+/* ABOUT - EXTENSION OF 2 COLUMN LAYOUT */
+
+#twoColumns 
+{ 
+ height:auto;
+}
+
+body
+{ 
+ columns: 2
+}
+
+#twoColumns p
+{
+ color:red;
+ font-size:30px; 
+ font-family:Arial, Helvetica, sans-serif; 
+ text-align:center;
+ letter-spacing:-1px;
+}
+
+#twoColumns h1
+{ 
+ font-size:30px; 
+ font-weight:bold; 
+ color:blue;
+ font-family:Arial, Helvetica, sans-serif; 
+}
+
+#twoColumns ul
+{ 
+ margin-left:-20px;
+ text-align:left; 
+}
+
+#twoColumns .left
+{ 
+ width:50%;
+}
+
+#twoColumns .right
+{ 
+ width:44%;
+}
+
+#twoColumns li
+{
+ list-style-image: url(../thumbs16/nota.png);
+ color:black;
+ font-size:16px; 
+ font-family:Arial, Helvetica, sans-serif; 
+ letter-spacing:-1px;
+}
+

@@ -4,14 +4,14 @@
 <title>{% block title %}ANJOS's webpage{% endblock %}</title>
 <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
 <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
-<link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/layoutSingleColumn.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/misc.css">
 </head>
 <body>
 {% include "header.html" %}
 {% include "bar.html" %}
 
-<div id="list">
+<div id="singleColumn">
  <li> <a href="{{ STATIC_URL }}html/vimCommands.html"> vim commands </a> </li>
  <li> <a href="{{ STATIC_URL }}html/vimrc.html"> vimrc file </a> </li>
  <li> <a href="{{ STATIC_URL }}html/bookmarks.html"> bookmarks </a> </li>

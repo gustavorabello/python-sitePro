@@ -4,14 +4,93 @@
 <title>{% block title %}ANJOS's webpage{% endblock %}</title>
 <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
 <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
-<link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
-<link rel="stylesheet" href="{{ STATIC_URL }}css/underConstruction.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/layoutTwoColumns.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/videos.css">
 </head>
 <body>
 {% include "header.html" %}
 {% include "bar.html" %}
 
-{% include "underConstruction.html" %}
+<div id="twoColumns">
+
+ <!-- 1st. video: -->
+ <div class="block">
+
+  <div class="left">
+   <h1> 2D Coalescence: </h1>
+
+   <iframe width="300" height="200"
+	src="http://www.youtube.com/embed/qzoG_wGDXTU" frameborder="0"
+	allowfullscreen></iframe>
+
+  </div>
+  <div class="right">
+   <p> Numerical simulation of 2-dimensional microchannel two-phase flow.
+   The bubble velocity profile is shown on the top where the highest
+   horizontal speed is represented by the red color and the lowest one
+   represented by the blue color. The mesh used in the 2D finite element
+   simulation is shown in the bottom part where the blue color denotes
+   the region occupied by the liquid and the red color represents the
+   vapor phase. This video shows a typical transition regime from slug
+   to elongated bubble flow pattern found in microchannels. Three
+   bubbles are initially distributed along the channel and due to the
+   flow conditions the last two bubbles coalesce, thus forming one
+   elongated bubble. </p>
+  </div>
+
+ </div>
+
+ <!-- 2nd. video: -->
+ <div class="block">
+
+  <div class="right">
+   <h1> 3D Air-Water: </h1>
+   <iframe width="300" height="230"
+	src="http://www.youtube.com/embed/-6wKVQsIUqw" frameborder="0"
+	allowfullscreen></iframe>
+  </div>
+  <div class="left">
+   <p> The rising of a single air bubble in a stagnant column of water
+   has been simulated. The 3-dimensional two-phase flow pheGustavo
+   Rabello dos Anjosna can be numerically predicted. At the leftmost
+   frame, the interface between fluid is represented by a set of points,
+   edges and triangular facets which are part of the tetrahedron domain
+   mesh. The middle frame is a contour plot of the same interface and
+   the rightmost one is a side view of the 3-dimensional domain. Due to
+   its properties, the flow field changes the initially spherical shape
+   while the bubble rises, thus affecting all the surrounded fluid. </p>
+  </div>
+
+ </div>
+
+ <!-- 3rd. video: -->
+ <div class="block">
+
+  <div class="left">
+   <h1> 3D Water-Sugar: </h1>
+
+   <iframe width="300" height="230"
+	src="http://www.youtube.com/embed/CBv8NA5pEQk" frameborder="0"
+	allowfullscreen></iframe>
+
+  </div>
+  <div class="right">
+   <p> Numerical simulation of 3-dimensional two-phase flow is performed to
+   predict the rising of an air bubble in a initially stagnant
+   water-sugar solution. At the leftmost frame, the interface between
+   fluid is represented by a set of points, edges and triangular facets
+   which are part of the tetrahedron domain mesh. The middle frame is a
+   contour plot of the same interface and the rightmost one is a side
+   view of the 3-dimensional domain. Due to the flow nature, the
+   initially spherical shape deforms while in ascension, then later the
+   air bubble converges to its final shape as show in this animation. </p>
+  </div>
+
+ </div>
+
+
+</div>
+
 
 {% include "footer.html" %}
 </body>
