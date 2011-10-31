@@ -11,10 +11,10 @@ os.environ['DJANGO_SETTINGS_MODULE'] = u"settings"
 
 from musics.models import Music
 
-dirname = 'musics/'
+dirname = 'static/cifras/'
 
 for artistname in os.listdir(dirname):
- if os.path.isdir(os.path.join('musics/', artistname)):
+ if os.path.isdir(os.path.join(dirname, artistname)):
   for infile in os.listdir(dirname+artistname):
    if fnmatch.fnmatch(infile, '*.html'): 
     basename = os.path.splitext(infile)[0]

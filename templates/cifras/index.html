@@ -21,7 +21,7 @@ href="{{ STATIC_URL }}images/guga.png">
   <h1> {{ artist.grouper }} 
   <ul>
    {% for item in artist.list %}
-   <li><a href="/static/cifras/{{ artist.grouper }}/{{ item.filename }}"> 
+   <li><a href="{{ STATIC_URL }}cifras/{{ artist.grouper }}/{{ item.filename }}"> 
 	{{ item.song }}</a></li>
    {% endfor %}
   </ul>
