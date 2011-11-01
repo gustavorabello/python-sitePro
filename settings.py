@@ -73,7 +73,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(ROOT_PATH,'deploy/static')
+STATIC_ROOT = ''
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
@@ -83,7 +83,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 # Additional locations of static files
 #-------------------------------------------------- 
 STATICFILES_DIRS = (
-  os.path.join(ROOT_PATH,'static/'),
+  os.path.join(DEPLOY_DIR,'static/'),
 )
 
 # List of finder classes that know how to find static files in
