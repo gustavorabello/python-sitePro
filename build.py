@@ -10,6 +10,55 @@ from PIL import Image
 
 os.environ['DJANGO_SETTINGS_MODULE'] = u"settings"
 
+def populateVideoDB():
+ from videos.models import Video
+
+ dirname = 'static/videos/'
+
+ print ""
+ print " ************************************* "
+ print " *  Adding entries to the database:  * "
+ print ""
+
+ # define initial relative position (frame and text)
+ posframe = 'left'
+ postext = 'right'
+
+ # loop all files
+ for arq in os.listdir(dirname):
+
+  if fnmatch.fnmatch(arq, '*.txt'): 
+   # spliting base name and extension
+     
+   fopen = open(dirname+arq,'r')
+   line = fopen.readlines()
+
+   filename=arq
+   titlename=line[0].split('\n')[0]
+   link=line[2].split('\n')[0]
+   text=line[4].split('\n')[0]
+   
+   # saving in the database
+   v = Video(filename=arq,
+             title=titlename,
+             youtube=link,
+             description=text,
+             position_frame=posframe,
+             position_text=postext)
+  
+   print "   " + titlename + ' added'
+   v.save()
+    
+   # alternating blocks
+   aux = posframe
+   posframe = postext
+   postext = aux
+ 
+ print ""
+ print " *  Entries in the database ADDED:   * "
+ print " ************************************* "
+ print ""
+
 def populateMusicDB():
  from musics.models import Music
 
@@ -156,6 +205,7 @@ def main():
  createDB()
  convertImages()
  populateMusicDB()
+ populateVideoDB()
 
  # completed build script
  print u"All done running build.py."

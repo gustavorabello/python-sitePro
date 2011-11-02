@@ -1,0 +1,5 @@
+3D Point Insertion Strategy
+
+http://www.youtube.com/embed/O_XaZa5wyOU
+
+The interface between fluids is represented by a set of points, edges and facets. These facets are triangles which are part of the tetrahedron mesh. Each triangle represents the shared facet of two adjacent tetrahedrons. As can be seen, while the surface movies with respect to the flow, the elements are stretched spoiling their quality ratios, thus the algorithm should insert points when an edge becomes bigger then a calculated value. Such a value is based on the local curvature and its required precision.

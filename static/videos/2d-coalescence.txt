@@ -1,0 +1,5 @@
+2D-Coalescence
+
+http://www.youtube.com/embed/qzoG_wGDXTU
+
+Numerical simulation of 2-dimensional microchannel two-phase flow. The bubble velocity profile is shown on the top where the highest horizontal speed is represented by the red color and the lowest one represented by the blue color. The mesh used in the 2D finite element simulation is shown in the bottom part where the blue color denotes the region occupied by the liquid and the red color represents the vapor phase. This video shows a typical transition regime from slug to elongated bubble flow pattern found in microchannels. Three bubbles are initially distributed along the channel and due to the flow conditions the last two bubbles coalesce, thus forming one elongated bubble.

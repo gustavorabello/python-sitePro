@@ -1,0 +1,5 @@
+3D Point Deletion Strategy
+
+http://www.youtube.com/embed/W-BRGcCDmsk
+
+The interface between fluids is represented by a set of points, edges and facets. These facets are triangles which are part of the tetrahedron mesh. Each triangle represents the shared facet of two adjacent tetrahedrons. As can be seen, while the surface movies with respect to the flow, the elements are compressed spoiling the their quality ratios, thus the algorithm should remove excessive concentration of points and remesh locally the hole formed by the deletion process.
