@@ -10,6 +10,53 @@ from PIL import Image
 
 os.environ['DJANGO_SETTINGS_MODULE'] = u"settings"
 
+def populateArticleDB():
+ from articles.models import Article
+
+ dirname = 'static/articles/'
+
+ print ""
+ print " ************************************* "
+ print " *  Adding entries to the database:  * "
+ print ""
+
+ # loop in year's folder
+ for year in os.listdir(dirname):
+  yearpath = dirname + year + '/'
+  # loop in month's folder
+  for month in os.listdir(yearpath):
+   monthpath = yearpath + month + '/'
+   # loop in articles's folder
+   for article in os.listdir(monthpath):
+    if fnmatch.fnmatch(article, '*.pdf'): 
+     # spliting base name and extension
+     basename = os.path.splitext(article)[0]
+     
+     # spliting basename in several words, ex:
+     # myNameIsGustavo ---> my Name Is Gustavo
+     splitsongname = re.sub(r'(?<=.)([A-Z])', r' \1', basename).split()
+
+     place=''
+     for name in splitsongname: 
+     # function: my Name Is Gustavo --> My Name Is Gustavo
+      place += name.title() + " "
+ 
+     # saving in the database
+     a = Article(filename=article,
+                 year=year,
+                 month=month,
+                 title='Two-Phase Flows and facilities',
+                 place='encit',
+                 kind='article')
+    
+     print "   " + article, year
+     a.save()
+ 
+ print ""
+ print " *  Entries in the database ADDED:   * "
+ print " ************************************* "
+ print ""
+
 def populateVideoDB():
  from videos.models import Video
 
@@ -206,6 +253,7 @@ def main():
  convertImages()
  populateMusicDB()
  populateVideoDB()
+ populateArticleDB()
 
  # completed build script
  print u"All done running build.py."
