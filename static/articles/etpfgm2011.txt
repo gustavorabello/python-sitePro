@@ -1,0 +1,11 @@
+3D Moving Mesh Technique for Microscale Two-Phase Flows
+
+2011
+
+May
+
+ETPFGM
+
+Congress
+
+A laboratory study of the turbulent boundary layer which develops over surface that present an abrupt change in roughness is made. The cases of a uniformly smooth surface, of a uniformly rough surface and of the surface that change from smooth to rough and from rough to smooth are investigated. Profiles of mean velocity, of turbulence intensity, of skin-friction coefficient, of the displacement in origin and of the thickness of the internal layer are presented. The skin-friction coefficient was calculated based on the chart method of Perry and Joubert(1963) and on a balance of the integral momentum equation. The same chart method was used for the evaluation of the displacement in origin. The thickness of the internal layer was calculated by two methods, the knee point method and the merge point method. The paper compares the present data with the lower atmosphere data of Bradley(1968) so that any possible analogy between the two works can be assessed.
