@@ -257,13 +257,11 @@ def createDB():
  os.system('python manage.py syncdb')
 
 def main():
-#--------------------------------------------------
-#  deleteDB()
-#  createDB()
-#  convertImages()
-#  populateMusicDB()
-#  populateVideoDB()
-#-------------------------------------------------- 
+ deleteDB()
+ createDB()
+ convertImages()
+ populateMusicDB()
+ populateVideoDB()
  populateArticleDB()
 
  # completed build script
