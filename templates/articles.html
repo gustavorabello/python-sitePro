@@ -12,280 +12,29 @@
 {% include "bar.html" %}
 
 <div id="singleColumn">
- <h1> 2011 </h1>
+
+ {% regroup article_list|dictsortreversed:"year" by year as year_list %}
+
+ {% for year in year_list %}
+ <h1> {{ year.grouper }} </h1>
+
+ {% for item in year.list %}
  <table cellpadding="0">
-  <tr bgcolor="DarkGray">
-   <td class="column1"> April </td>
-   <td class="column1"> Nano-Tera </td>
-   <td class="column2"> 3D ALE-FEM for Microscale Two-Phase Flows </td>
+  <tr bgcolor={{ item.color }}>
+   <td class="column1"> {{ item.month }} </td>
+   <td class="column1"> {{ item.place }} </td>
+   <td class="column2"> {{ item.title }} </td>
    <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/cmosaic2011.pdf" target="_blank"> 
+	<div class="left"> <a href="{{ STATIC_URL }}pdf/{{ item.filename }}" target="_blank"> 
 	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/cmosaic2011.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </td>
-  </tr>
-  <tr bgcolor="Gray">
-   <td class="column1"> May </td>
-   <td class="column1"> ETPFGM </td>
-   <td class="column2"> 3D Moving Mesh Technique for Microscale
-	Two-Phase Flows </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/etpfgm2011.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/etpfgm2011.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="DarkGray">
-   <td class="column1"> June </td>
-   <td class="column1"> eeWorkshop </td>
-   <td class="column2"> 3D Moving Mesh Technique for Microscale
-	Two-Phase Flows </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/eeWorkshop2011.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}ppt/eeWorkshop2011.pdf" target="_blank"> 
+	<div class="right"><a href="{{ STATIC_URL }}pdf/{{ item.filename }}" target="_blank"> 
 	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
    </td>
   </tr>
  </table>
 
- <h1> 2010 </h1>
- <table cellpadding="0">
-  <tr bgcolor="Gray">
-   <td class="column1"> May </td>
-   <td class="column1"> ETPFGM </td>
-   <td class="column2"> A 3D ALE-FEM Method for Microscale Two-Phase Flows </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/etpfgm2010.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/etpfgm2010.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="DarkGray">
-   <td class="column1"> April </td>
-   <td class="column1"> NanoTera </td>
-   <td class="column2"> Numerical Simulation of Two-Phase Flows </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/cmosaic2010.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/cmosaic2010.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </td>
-  </tr>
- </table>
-
- <h1> 2008 </h1>
- <table cellpadding="0">
-  <tr bgcolor="Gray">
-   <td class="column1"> December </td>
-   <td class="column1"> ENCIT </td>
-   <td class="column2"> An ALE Finite Element Method for Simulation of
-	3D Multiphase Flows </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/encit2008.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/encit2008.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
-  <tr bgcolor="DarkGray">
-   <td class="column1"> ---- </td>
-   <td class="column1"> ANNE </td>
-   <td class="column2"> Modeling Hydrodynamic Stability in
-	Electrochemical Cells </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/anne2008.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/anne2008.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="Gray">
-   <td class="column1"> ---- </td>
-   <td class="column1"> EMC </td>
-   <td class="column2"> Estabilidade Hidrodinamica em Celulas
-	Eletroquimicas </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/emcLivro2008.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/emcLivro2008.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
- </table>
-
- <h1> 2007 </h1>
- <table cellpadding="0">
-  <tr bgcolor="DarkGray">
-   <td class="column1"> April </td>
-   <td class="column1"> M.Sc Thesis </td>
-   <td class="column2"> Hydrodynamic Field Solution of Electrochemical
-	Cells Through The Finite Element Method </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/gustavoMSc.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/gustavoMsc.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="Gray">
-   <td class="column1"> March </td>
-   <td class="column1"> FEF </td>
-   <td class="column2"> FEM Simulation of Coupled Flow and Scalar
-	Transport in Hydropower Plant Reservoirs </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/fef2007_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/fef2007_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
-  <tr bgcolor="DarkGray">
-   <td class="column1"> March </td>
-   <td class="column1"> FEF </td>
-   <td class="column2"> FEM-DNS of Coupled Flow and Transport in
-	Rotating Disk Electrochemical Cells </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/fef2007_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/fef2007_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="Gray">
-   <td class="column1"> July </td>
-   <td class="column1"> ICIAM </td>
-   <td class="column2"> Numerical Modeling of the Hydrodynamic Field
-	Coupled to the Transport of Chemical Species Through the
-	Finite-Element Method </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/iciam2007_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/iciam2007_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
-  <tr bgcolor="DarkGray">
-   <td class="column1"> July </td>
-   <td class="column1"> ICIAM </td>
-   <td class="column2"> Finite-Element Method Simulation of Rotating
-	Disk Flow: Effect of the Transport of a Chemical Species </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/iciam2007_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/iciam2007_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="Gray">
-   <td class="column1"> ---- </td>
-   <td class="column1"> EMC </td>
-   <td class="column2"> Hydrodynamic Stability in Electrochemical Cells </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/emc2007.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/emc2007.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
- </table>
-
- <h1> 2006 </h1>
- <table cellpadding="0">
-  <tr bgcolor="DarkGray">
-   <td class="column1"> September </td>
-   <td class="column1"> CNMAC </td>
-   <td class="column2"> Simulacao Numerica das Equacoes de Navier-Stokes
-   Acopladas ao Transporte de uma Especie Quimica pelo Metodo de
-   Elementos Fintios </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/cnmac2006_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/cnmac2006_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="Gray">
-   <td class="column1"> September </td>
-   <td class="column1"> CNMAC </td>
-   <td class="column2"> Finite Element Method for Low Froude Number
-	Saint-Venant Equations </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/cnmac2006_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/cnmac2006_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
-  <tr bgcolor="DarkGray">
-   <td class="column1"> December </td>
-   <td class="column1"> ENCIT </td>
-   <td class="column2"> Modelagem Numerica de Escoamentos Acoplados ao
-	Transporte de uma Especie Quimica por Elementos Finitos </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/encit2006.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/encit2006.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="Gray">
-   <td class="column1"> December </td>
-   <td class="column1"> POSMEC </td>
-   <td class="column2"> Simulacao Numerica das Equacoes de Saint-Venant
-   Utilizando o Metodo dos Elementos Finitos </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/posmec2006.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/posmec2006.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
- </table>
-
- <h1> 2005 </h1>
- <table cellpadding="0">
-  <tr bgcolor="DarkGray">
-   <td class="column1"> December </td>
-   <td class="column1"> B.Sc. Project </td>
-   <td class="column2"> Wind Tunnel Simulation of Atmospheric Boundary
-	Layer </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/gustavoBSc.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/gustavoBSc.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
- </table>
-
- <h1> 2004 </h1>
- <table cellpadding="0">
-  <tr bgcolor="Gray">
-   <td class="column1"> December </td>
-   <td class="column1"> ENCIT </td>
-   <td class="column2"> Simulacao Experimental de Camada Limite
-	Atmosferica Costeira em Tunel de Vento </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/encit2004_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/encit2004_1.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
-  <tr bgcolor="DarkGray">
-   <td class="column1"> December </td>
-   <td class="column1"> ENCIT </td>
-   <td class="column2"> Turbulent Forced Convection Air Cooling of
-	Electronics </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/encit2004_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/encit2004_2.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-  </tr>
- </table>
-
- <h1> 2003 </h1>
- <table cellpadding="0">
-  <tr bgcolor="Gray">
-   <td class="column1"> December </td>
-   <td class="column1"> CESAM </td>
-   <td class="column2"> Simulacao Experimental de Camada Limite
-	Atmosferica em Tunel de Vento </td>
-   <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/cesam2003.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/cesam2003.pdf" target="_blank"> 
-	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
-   </tr>
- </table>
+ {% endfor %}
+ {% endfor %}
 
 </div>
 

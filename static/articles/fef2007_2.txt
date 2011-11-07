@@ -1,0 +1,11 @@
+FEM-DNS Of Coupled Flow And Transport In Rotating-Disk Electrochemical Cells
+
+2007
+
+March
+
+FEF
+
+Congress
+
+We consider the rotating disk flow coupled, through the fluid viscosity, to the mass concentration field of a chemical species. This configuration refers to an electrochemical cell with an working electrode consisting of an iron rotating rod which is dissolved in the electrolyte, a 1 M H2 SO4 solution. Polarization curves obtained in such cells present a current instability at the beginning of the region where the current is controlled by the mass transport. The instability appears at a certain value of the applied potential and is suppressed beyond another value. Dissolution of the electrode gives rise to a thin concentration boundary layer, which, together with the potential applied to the electrode, results in an increase in the fluid viscosity and in a decrease in the diffusion coefficient, both affecting the current.

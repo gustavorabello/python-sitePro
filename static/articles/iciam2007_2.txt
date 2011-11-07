@@ -1,0 +1,11 @@
+Finite-element method simulation of rotating disk flow: effect of the transport of a chemical species
+
+2007
+
+March
+
+July
+
+Congress
+
+Electrochemical cells containing an iron rotating disk electrode which is dissolved in the electrolyte, an 1 M H2 SO4 solution present a current instability in the plateau region, where the current is controlled by the mass transport. Dissolution of the electrode gives rise to a thin concentration boundary layer, due to a Schmidt number Sc = 2000. This boundary layer, together with the potential applied to the electrode, leads to an increase in the fluid viscosity and in a decrease in the diffusion coefficient, coupling the concentration and the chemical species field. Since the current is proportional to the concentration gradient at the interface, an instability of the coupled fields at Reynolds numbers attained in experimental conditions could be responsible for the current instability. Mangiavacchi [1] performed a linear stability analysis of the problem and showed that this is indeed the case. In this paper we review the main results of the stability analysis and present the main features of the FEM code recently developed in our group, to proceed with the investigation of the current instability observed in electrochemical cells.
