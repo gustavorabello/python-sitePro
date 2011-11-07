@@ -1,1 +1,20 @@
-{% extends "about.html" %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>{% block title %}ANJOS's webpage{% endblock %}</title>
+<link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
+<link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/layoutSingleColumn.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/misc.css">
+</head>
+<body>
+{% include "header.html" %}
+{% include "bar.html" %}
+
+<div id="singleColumn">
+ WELCOME!	
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

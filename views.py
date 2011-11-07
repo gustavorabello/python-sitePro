@@ -1,14 +1,11 @@
 # Create your views here.
 
 from django.conf import settings
-from django.template import loader,Context
-from django.http import HttpResponse,Http404
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.http import HttpResponse
 
 def index(request):
- raise Http404
-#--------------------------------------------------
-#  c = Context(settings.CONTEXT)
-#  t = loader.get_template('index.html')
-#  return HttpResponse(t.render(c))
-#-------------------------------------------------- 
+ return render_to_response('about.html',
+                           context_instance=RequestContext(request,settings.CONTEXT))
 
