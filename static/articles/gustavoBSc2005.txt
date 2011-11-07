@@ -1,0 +1,11 @@
+Wind Tunnel Simulation of Atmospheric Boundary Layer
+
+2005
+
+December
+
+UERJ
+
+B.Eng. Project
+
+A laboratory study of the turbulent boundary layer which develops over surface that present an abrupt change in roughness is made. The cases of a uniformly smooth surface and three kinds of different roughness surfaces are investigated. The tree forest dispositions are, respectively, in line forest, where the top of trees is lined up with the smooth surface; open forest, where the base of trees is lined up with the smooth surface; and closed forest, equally represented for open forest with the difference of the aluminum plate inclusion made use transversally to the long of the wind tunnel. The objective of this work is analise, experimentally, the caracteristic of forest atmospheric flow. Velocity profle, skin-friction coefcient, internal boundary layer thickness, Clausers factor and the distribution of integral momentum are presente. The method of integral balance was used to investigate the decurrent phenomena of the simulation of forest in wind tunnel

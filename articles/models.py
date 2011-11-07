@@ -7,7 +7,9 @@ class Article(models.Model):
  title = models.CharField(max_length=500)
  place = models.CharField(max_length=20)
  kind = models.CharField(max_length=20)
+ color = models.CharField(max_length=10)
+ abstract = models.CharField(max_length=5000)
 
  def __unicode__(self):
-  return self.filename
+  return self.abstract
 

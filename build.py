@@ -20,38 +20,47 @@ def populateArticleDB():
  print " *  Adding entries to the database:  * "
  print ""
 
- # loop in year's folder
- for year in os.listdir(dirname):
-  yearpath = dirname + year + '/'
-  # loop in month's folder
-  for month in os.listdir(yearpath):
-   monthpath = yearpath + month + '/'
-   # loop in articles's folder
-   for article in os.listdir(monthpath):
-    if fnmatch.fnmatch(article, '*.pdf'): 
-     # spliting base name and extension
-     basename = os.path.splitext(article)[0]
-     
-     # spliting basename in several words, ex:
-     # myNameIsGustavo ---> my Name Is Gustavo
-     splitsongname = re.sub(r'(?<=.)([A-Z])', r' \1', basename).split()
+ # define initial relative position (frame and text)
+ row1 = 'DarkGray'
+ row2 = 'Gray'
 
-     place=''
-     for name in splitsongname: 
-     # function: my Name Is Gustavo --> My Name Is Gustavo
-      place += name.title() + " "
- 
-     # saving in the database
-     a = Article(filename=article,
+ # loop all files
+ for arq in os.listdir(dirname):
+
+  if fnmatch.fnmatch(arq, '*.txt'): 
+   # spliting base name and extension
+   basename = os.path.splitext(arq)[0]
+   filename = basename + '.pdf'
+     
+   fopen = open(dirname+arq,'r')
+   line = fopen.readlines()
+
+   title = line[0].split('\n')[0]
+   year  = line[2].split('\n')[0]
+   month = line[4].split('\n')[0]
+   place = line[6].split('\n')[0]
+   kind  = line[8].split('\n')[0]
+   abstract = line[10].split('\n')[0]
+   rowColor = row1
+   
+   # saving in the database
+   art = Article(filename=filename,
                  year=year,
                  month=month,
-                 title='Two-Phase Flows and facilities',
-                 place='encit',
-                 kind='article')
+                 title=title,
+                 place=place,
+                 kind=kind,
+                 color=rowColor,
+                 abstract=abstract)
+  
+   print "   " + filename + ' added'
+   art.save()
+
+   # alternating blocks
+   aux = row1
+   row1 = row2
+   row2 = aux
     
-     print "   " + article, year
-     a.save()
- 
  print ""
  print " *  Entries in the database ADDED:   * "
  print " ************************************* "

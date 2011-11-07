@@ -1,0 +1,12 @@
+Hydrodynamic Field Solution of Electrochemical Cells Through The Finite Element Method
+
+2007
+
+April
+
+UFRJ
+
+M.Sc. Dissertation
+
+Current instabilities in electrochemical cells is a research subject of the Applied Electrochemistry Group in the Metallurgy and Materials Program COPPE/UFRJ. Electrochemical cells containing a 1M sulfuric acid electrolyte and an iron rotating disk electrode are used by the group and present this instability. A possible reason for the phenomena is a reduction of the stability of the flow, induced by the existence of a thin mass concentration boundary layer, produced by the dissolution of the electrode. The group has addressed the problem by performing linear stability analysis of the flow for electrolytes with a viscosity profile depending on the axial coordinate z only and, subsequently, by coupling the hydrodynamic and the mass concentration field produced by the dissolution of the electrode, through the fluid viscosity. The results suggest a signifcant reduction of the stability of the flow, due to the coupling of fields. The purpose of this work is to develop a computational platform for further studying the hydrodynamic field close to the rotating disk electrode, through a 3D Direct Numerical Simulation using the Finite Element Method. Viscous and pressure terms are discretized through the Galerkin method and the convective term is treated through a semi-Lagrangean method. Time derivatives are discretized by a first-order backward Euler implicit scheme. Velocity and pressure are decoupled through a projection method based on LU decomposition. The resulting linear system is solved by the pre-conditioned conjugate gradient method. A hydrodynamic field, very close to the generalized von Karman solution for the rotating disk flow was obtained, validating the code. The code, developed within the object oriented paradigm, constitutes a platform for the study of 3D perturbations in electrochemical cells in the linear regimen and in the saturation and the modes interaction in the non-linear regimen.
+

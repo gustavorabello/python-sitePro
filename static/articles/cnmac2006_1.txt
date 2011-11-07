@@ -1,0 +1,11 @@
+Solucao Numerica das Equacoes de Navier-Stokes Acopladas ao Transporte de uma Especie Quimica pelo Metodo de Elementos Finitos
+
+2006
+
+September
+
+CNMAC
+
+Congress
+
+Um modelo numerico e proposto para a solucao das equacoes de Saint-Venant. O Metodo dos Elementos Finitos e utilizado para a discretizacao do problema e o paradigma da orientacao a objetos, para elaboracao do codigo numerico. A discretizacao espacial dos termos difusivos e da pressao e feita pelo metodo de Galerkin. Utiliza-se, para discretizacao da derivada substancial, uma abordagem semi-Lagrangeana atraves de um esquema implicito por diferencas regressivas de primeira ordem. O sistema linear e decomposto em blocos LU atraves do metodo da projecao discreto e resolvido por metodo iterativo.
