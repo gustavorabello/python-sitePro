@@ -20,7 +20,7 @@
 
  {% for item in year.list %}
  <table cellpadding="0">
-  <tr bgcolor={{ item.color }}>
+  <tr bgcolor={% cycle 'DarkGray' 'Gray' %}>
    <td class="column1"> {{ item.month }} </td>
    <td class="column1"> {{ item.place }} </td>
    <td class="column2"> {{ item.title }} </td>

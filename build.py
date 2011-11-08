@@ -20,10 +20,6 @@ def populateArticleDB():
  print " *  Adding entries to the database:  * "
  print ""
 
- # define initial relative position (frame and text)
- row1 = 'DarkGray'
- row2 = 'Gray'
-
  # loop all files
  for arq in os.listdir(dirname):
 
@@ -41,7 +37,6 @@ def populateArticleDB():
    place = line[6].split('\n')[0]
    kind  = line[8].split('\n')[0]
    abstract = line[10].split('\n')[0]
-   rowColor = row1
    
    # saving in the database
    art = Article(filename=filename,
@@ -50,17 +45,11 @@ def populateArticleDB():
                  title=title,
                  place=place,
                  kind=kind,
-                 color=rowColor,
                  abstract=abstract)
   
    print "   " + filename + ' added'
    art.save()
 
-   # alternating blocks
-   aux = row1
-   row1 = row2
-   row2 = aux
-    
  print ""
  print " *  Entries in the database ADDED:   * "
  print " ************************************* "
@@ -75,10 +64,6 @@ def populateVideoDB():
  print " ************************************* "
  print " *  Adding entries to the database:  * "
  print ""
-
- # define initial relative position (frame and text)
- posframe = 'left'
- postext = 'right'
 
  # loop all files
  for arq in os.listdir(dirname):
@@ -98,18 +83,11 @@ def populateVideoDB():
    v = Video(filename=arq,
              title=titlename,
              youtube=link,
-             description=text,
-             position_frame=posframe,
-             position_text=postext)
+             description=text)
   
    print "   " + titlename + ' added'
    v.save()
     
-   # alternating blocks
-   aux = posframe
-   posframe = postext
-   postext = aux
- 
  print ""
  print " *  Entries in the database ADDED:   * "
  print " ************************************* "

@@ -6,8 +6,6 @@ class Video(models.Model):
  title = models.CharField(max_length=50)
  youtube = models.CharField(max_length=250)
  description = models.CharField(max_length=2000)
- position_frame = models.CharField(max_length=500)
- position_text = models.CharField(max_length=500)
 
  def __unicode__(self):
   return self.youtube

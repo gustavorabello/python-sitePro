@@ -16,7 +16,7 @@
  {% for video in video_list %}
  <div class="block">
 
-  <div class="{{ video.position_frame }}">
+  <div class="{% cycle 'left' 'right' %}">
    <h1> {{ video.title }} </h1>
 
    <iframe width="300" height="200"
@@ -24,7 +24,7 @@
 	allowfullscreen></iframe>
 
   </div>
-  <div class="{{ video.position_text }}">
+  <div class="{% cycle 'right' 'left' %}">
    <p> {{ video.description }} </p>
   </div>
 
