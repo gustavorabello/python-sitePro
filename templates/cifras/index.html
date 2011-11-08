@@ -12,23 +12,19 @@ href="{{ STATIC_URL }}images/guga.png">
 {% include "header.html" %}
 {% include "bar.html" %}
 
+{% regroup music_list|dictsort:"artist" by artist as artist_list %}
+
 <div id="twoColumns">
 
- {% regroup music_list|dictsort:"artist" by artist as artist_list %}
+ {% for artist in artist_list %}
+ <h1> {{ artist.grouper }}  </h1>
+ <hr /><br />
 
- <ul>
-  {% for artist in artist_list %}
-  <h1> {{ artist.grouper }} 
-  <ul>
-   {% for item in artist.list %}
-   <li><a href="{{ STATIC_URL }}cifras/{{ item.artistdir }}/{{ item.filename }}"> 
-	{{ item.song }}</a></li>
-   {% endfor %}
-  </ul>
-  </h1>
+ {% for item in artist.list %}
+ <li><a href="{{ STATIC_URL }}cifras/{{ item.artistdir }}/{{ item.filename }}">{{ item.song }}</a></li>
+ {% endfor %}
 
-  {% endfor %}
- </ul>
+ {% endfor %}
 
 </div>
 
