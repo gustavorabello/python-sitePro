@@ -3,7 +3,7 @@
 
 #twoColumns 
 { 
- height:auto;
+ height:2100px;
 }
 
 body
@@ -35,20 +35,12 @@ body
 
 #twoColumns .left
 { 
- float:left;
- width:300px;
+ width:47%;
 }
 
 #twoColumns .right
 { 
- float:right;
- width:300px;
- border:10px solid gray;
-}
-
-#twoColumns .block
-{ 
- width:700px;
+ width:49%;
 }
 
 #twoColumns li
@@ -63,7 +55,8 @@ body
 
 #twoColumns hr
 { 
- background-color:red;
+ background-color:blue;
  height:3px;
  border:0;
 }
+
