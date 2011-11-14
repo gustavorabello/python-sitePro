@@ -57,36 +57,31 @@ def populateArticleDB():
 
 def populateVideoDB():
  from videos.models import Video
-
- dirname = 'static/videos/'
+ import gdata.youtube
+ import gdata.youtube.service
 
  print ""
  print " ************************************* "
  print " *  Adding entries to the database:  * "
  print ""
 
- # loop all files
- for arq in os.listdir(dirname):
+ yt_service = gdata.youtube.service.YouTubeService()
+ pl_id = 'A5C4DB7CAE7AF003'
+ playlist_video_feed = yt_service.GetYouTubePlaylistVideoFeed(playlist_id=pl_id)
+ for entry in playlist_video_feed.entry:
+  title =  entry.media.title.text
+  youtube = 'http://www.youtube.com/embed/%s' % entry.media.player.url[31:42]
+  description = entry.media.description.text
+  duration = entry.media.duration.seconds
 
-  if fnmatch.fnmatch(arq, '*.txt'): 
-   # spliting base name and extension
-     
-   fopen = open(dirname+arq,'r')
-   line = fopen.readlines()
-
-   filename=arq
-   titlename=line[0].split('\n')[0]
-   link=line[2].split('\n')[0]
-   text=line[4].split('\n')[0]
-   
-   # saving in the database
-   v = Video(filename=arq,
-             title=titlename,
-             youtube=link,
-             description=text)
+  # saving in the database
+  v = Video(title=title,
+            youtube=youtube,
+            description=description,
+            time=duration)
   
-   print "   " + titlename + ' added'
-   v.save()
+  print "   " + title + ' added'
+  v.save()
     
  print ""
  print " *  Entries in the database ADDED:   * "
