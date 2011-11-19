@@ -8,7 +8,7 @@ from django.http import HttpResponse,Http404
 
 def index(request):
  m = Music.objects.all()
- return render_to_response('cifras/index.html',
+ return render_to_response('cifras.html',
                            {
                             'music_list':m,
                            },
