@@ -19,9 +19,13 @@
 
 #twoColumns p 
 { 
- margin-top:40px;
  width:95%;
  color:white;
+}
+
+#twoColumns p.text
+{ 
+ margin-top:40px;
 }
 
 #twoColumns .block
