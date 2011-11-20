@@ -9,15 +9,10 @@
 }
 
 #singleColumn li
-{ 
- padding-left:50px;
-}
-
-#singleColumn li
 {
  list-style-type:disc;
  color:red;
- padding-left:50px;
+ margin-left:50px;
 }
 
 #singleColumn a
