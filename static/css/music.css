@@ -45,7 +45,7 @@ body
 
 #twoColumns li
 {
- padding-left:20px;
+ margin-left:20px;
  list-style-image: url(../thumbs16/nota.png);
  color:black;
  font-size:16px; 
