@@ -1,12 +1,33 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
+ <meta name="google-site-verification"
+ content="vvZ_kOcnnIIs2mmqyPjJfenUe4kMKD6LowMEB7ONDnY" />
 <title>{% block title %}ANJOS's webpage{% endblock %}</title>
 <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
 <link rel="shortcut icon" type="image/png" 
 href="{{ STATIC_URL }}images/guga.png">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/layoutTwoColumns.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/about.css">
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-27563209-1']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+  var ga = document.createElement('script'); ga.type =
+  'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ?
+   'https://ssl' : 'http://www') +
+  '.google-analytics.com/ga.js';
+  var s =
+  document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
 {% include "header.html" %}

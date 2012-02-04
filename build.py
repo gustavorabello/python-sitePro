@@ -70,7 +70,7 @@ def populateVideoDB():
  playlist_video_feed = yt_service.GetYouTubePlaylistVideoFeed(playlist_id=pl_id)
  for entry in playlist_video_feed.entry:
   title =  entry.media.title.text
-  youtube = 'http://www.youtube.com/embed/%s' % entry.media.player.url[31:42]
+  youtube = 'http://www.youtube.com/embed/%s' % entry.media.player.url[32:43]
   description = entry.media.description.text
   duration = entry.media.duration.seconds
 
