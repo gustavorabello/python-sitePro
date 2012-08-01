@@ -1,0 +1,81 @@
+
+/* SALES - EXTENSION OF 2 COLUMN LAYOUT */
+#twoColumns
+{ 
+ height:auto;
+}
+
+#twoColumns h1 
+{ 
+ font-size:20px;
+ text-align:center;
+ padding-bottom:5px;
+ color:blue; 
+}
+
+#twoColumns h2
+{ 
+}
+
+#twoColumns p 
+{ 
+ width:95%;
+ color:white;
+}
+
+#twoColumns img
+{ 
+ width:75%;
+ margin-top:20px;
+ border-style:solid;
+}
+
+#twoColumns p.text
+{ 
+ margin-top:30px;
+ font-size:20px;
+}
+
+#twoColumns p.text2
+{ 
+ margin-top:3px;
+ font-size:17px;
+}
+
+#twoColumns p.price
+{ 
+ color:yellow;
+ font-size:18px;
+}
+
+#twoColumns .block
+{ 
+ margin-left:-7px;
+ width:700px;
+ height:330px;
+ background-position:center;
+ background-image:url(../images/videoBack.png); 
+ background-repeat:no-repeat; 
+}
+
+#twoColumns .left
+{ 
+ padding-left:25px;
+ float:left;
+ width:320px;
+ vertical-align:middle;
+ text-align:center;
+
+}
+
+#twoColumns .right
+{ 
+ padding-right:30px;
+ float:right;
+ width:320px;
+ vertical-align:middle;
+ text-align:center;
+}
+
+
+

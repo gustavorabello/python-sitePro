@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>{% block title %}ANJOS's webpage{% endblock %}</title>
+<link rel="icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
+<link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}images/guga.png">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/layoutTwoColumns.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/sales.css">
+</head>
+<body>
+{% include "header.html" %}
+{% include "bar.html" %}
+
+<div id="twoColumns">
+
+ {% for sale in sale_list %}
+ <div class="block">
+
+  <div class="{% cycle 'left' 'right' %}">
+
+   <img src="{{ STATIC_URL }}images/{{ sale.image }}"> </img>
+
+  </div>
+  <div class="{% cycle 'right' 'left' %}">
+   <p class="text"> {{ sale.obj }} </p>
+   <p class="text2"> info: {{ sale.info }} </p>
+
+   <p class="text"> 
+   <a href={{ sale.link }}> plus d'info </a> 
+   </p>
+
+
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p> prix d'achat: CHF {{ sale.original }} </p>
+   <p class="price"> prix: CHF {{ sale.price }} </p>
+  </div>
+
+ </div>
+ {% endfor %}
+
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>
