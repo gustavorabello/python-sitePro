@@ -1,8 +1,8 @@
-A 3D ALE Finite Element Method for Two-Phase Flows with Phase Change
+A 3D ALE FE Method for Two-Phase Flows with Phase Change
 
 2012
 
------
+June
 
 ECI
 
