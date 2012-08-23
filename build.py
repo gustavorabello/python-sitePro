@@ -267,7 +267,8 @@ def convertImages():
   im.save(os.path.join(deploy_thumb16_path, filename), "PNG")
 
 def deleteDB():
- os.remove( os.path.join(os.path.dirname(__file__),'../database') )
+ if os.path.exists("../database"):
+  os.remove( os.path.join(os.path.dirname(__file__),'../database') )
 
 def createDB():
  os.system('python manage.py syncdb')
