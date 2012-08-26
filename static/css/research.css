@@ -2,7 +2,7 @@
 
 #twoColumns 
 { 
- height:1570px;
+ height:2000px;
 }
 
 #twoColumns ul
@@ -32,7 +32,7 @@
 
 #twoColumns .right
 { 
- padding-top:30px;
+ padding-top:40px;
  padding-bottom:10px;
  width:52%;
  margin-left:auto;
