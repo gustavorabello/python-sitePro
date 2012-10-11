@@ -10,6 +10,50 @@ from PIL import Image
 
 os.environ['DJANGO_SETTINGS_MODULE'] = u"settings"
 
+def populateRecipeDB():
+ from recipes.models import Recipe
+
+ dirname = 'static/recipes/'
+
+ print ""
+ print " ************************************* "
+ print " *  Adding entries to the database:  * "
+ print ""
+
+ # loop all files
+ for arq in os.listdir(dirname):
+
+  if fnmatch.fnmatch(arq, '*.txt'): 
+   # spliting base name and extension
+   basename = os.path.splitext(arq)[0]
+   filename = basename + '.png'
+     
+   fopen = open(dirname+arq,'r')
+   line = fopen.readlines()
+
+   obj = line[0].split('\n')[0]
+   info = line[2].split('\n')[0]
+   link = line[4].split('\n')[0]
+   original = line[6].split('\n')[0]
+   price = line[8].split('\n')[0]
+
+   # saving in the database
+   rec = Recipe(obj=obj,
+                image=filename,
+                info=info,
+                link=link,
+                original=original,
+                price=price)
+  
+   print "   " + filename + ' added'
+   rec.save()
+
+ print ""
+ print " *  Entries in the database ADDED:   * "
+ print " ************************************* "
+ print ""
+
+
 def populateSaleDB():
  from sales.models import Sale 
 
@@ -278,6 +322,7 @@ def main():
  createDB()
  convertImages()
  populateSaleDB()
+ populateRecipeDB()
  populateMusicDB()
  populateVideoDB()
  populateArticleDB()

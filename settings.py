@@ -173,6 +173,7 @@ INSTALLED_APPS = (
     'videos',
     'musics',
     'sales',
+    'recipes',
 )
 
 # A sample logging configuration. The only tangible logging
