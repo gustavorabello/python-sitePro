@@ -1,0 +1,10 @@
+Rotating Disk
+
+3d
+
+04.JAN.2007
+
+Single phase rotating disk flow. The boundary layer is shown decomposed
+onto three orthogonal directions: x, y and z. The inflow comes from
+the top while the outlow is set by the movement of the circular disk,
+where the fluid is thrown out when touches the plate.

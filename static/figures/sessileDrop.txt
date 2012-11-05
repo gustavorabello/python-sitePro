@@ -1,0 +1,7 @@
+Sessile Drop
+
+3d
+
+15.APR.2012
+
+Comparison between the numerical solution of an axisymmetric sessile drop and the analytical solution of its shape derived by the Young-Laplace equation of capillarity.

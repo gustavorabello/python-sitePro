@@ -7,9 +7,25 @@
 <link rel="stylesheet" href="{{ STATIC_URL }}css/layoutTwoColumns.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/images.css">
 </head>
+
+<script>
+ function bigImg(x)
+ {
+  x.style.height="450px";
+  x.style.width="560px";
+ }
+
+ function normalImg(x)
+ {
+  x.style.height="250px";
+  x.style.width="280px";
+ }
+</script>
+
 <body>
 {% include "header.html" %}
 {% include "bar.html" %}
+
 
 <div id="twoColumns">
 
@@ -17,20 +33,18 @@
  <div class="block">
 
    <div class="left"> 
-   <h1> {{ image.title }} </h1>
+   <h1> {{ image.title}} </h1>
 
-
-   <h1> {{ image.dimension}} </h1>
-
+   <h2> date: {{ image.date }}</h2>
    <p>&nbsp;</p>
-   <p> date: {{ image.date }}s</p>
 
-   <p>&nbsp;</p>
    <p class="text"> {{ image.text }} </p>
   </div>
 
-   <div class="right"> 
-	<img src="{{ STATIC_URL }}images/{{ image.filename }}"> </a> 
+  <div class="right"> 
+   <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+   src="{{ STATIC_URL }}images/{{ image.filename }}" alt=""
+   width="280" height="250"> </a>
   </div>
 
  </div>
@@ -41,3 +55,5 @@
 {% include "footer.html" %}
 </body>
 </html>
+
+

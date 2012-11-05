@@ -38,6 +38,7 @@ def populateImageDB():
    
    # saving in the database
    img = Image(filename=filename,
+               title=title, 
                dimension=dim, 
                date=date,
                text=text)
