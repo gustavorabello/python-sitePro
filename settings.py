@@ -20,6 +20,7 @@ PDF_DIR = os.path.join(STATIC_DIR,'pdf')
 PPT_DIR = os.path.join(STATIC_DIR,'ppt')
 HTML_DIR = os.path.join(STATIC_DIR,'html')
 CIFRAS_DIR = os.path.join(STATIC_DIR,'cifras')
+MISC_DIR = os.path.join(STATIC_DIR,'misc')
 
 ADMINS = (
     # ('Gustavo ANJOS', 'gustavo.rabello@gmail.com'),

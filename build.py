@@ -307,6 +307,10 @@ def convertImages():
  deploy_cifras_dir = os.path.join(deploy_static_dir,'cifras')
  shutil.copytree(settings.CIFRAS_DIR,deploy_cifras_dir)
 
+ print u"Copying contents of misc into deploy/static/misc..."
+ deploy_misc_dir = os.path.join(deploy_static_dir,'misc')
+ shutil.copytree(settings.MISC_DIR,deploy_misc_dir)
+
  print u"Creating images and thumbnails directories..."
  deploy_thumb16_path  = os.path.join(deploy_static_dir,'thumbs16')
  deploy_thumb32_path  = os.path.join(deploy_static_dir,'thumbs32')
