@@ -1,0 +1,7 @@
+3D Vortex
+
+3d
+
+11.FEB.2013
+
+Two-phase flow on a 3D vortex background flow. The surface mesh is represented by interconnected triangular faces in which a fully 3D vortex field distorts it. The surface mesh is initially configured as a sphere and later assumes such a form. The field is then reversed to recover the initial sphere shape. The snapshot presented here was taken in its strongest deformation. The surface mesh colored by the magnitude of the vortex field velocity. The red color represents high velocity, while the blue one stands for low intensity.
