@@ -1,14 +1,14 @@
 # Django settings for sitePro project.
-import os, datetime,socket
+import os, datetime
 
 # URL prefix for static files,
 # set DEBUG mode
-if socket.gethostname() == 'alkalurops':
- STATIC_URL = 'http://misc.rabello.org/static/'
- DEBUG = TEMPLATE_DEBUG = False
-else:
+if os.uname()[0] == 'Darwin':
  STATIC_URL = '/deploy/static/'
  DEBUG = TEMPLATE_DEBUG = True
+else:
+ STATIC_URL = 'http://misc.rabello.org/static/'
+ DEBUG = TEMPLATE_DEBUG = False
 
 ROOT_PATH = os.path.dirname(__file__)
 DEPLOY_DIR = os.path.join(ROOT_PATH,'deploy')
