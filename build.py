@@ -4,7 +4,7 @@
 #  e-mail: gustavo.rabello@gmail.com                                    #
 ## =================================================================== ##
 
-import os,fnmatch,re,shutil,socket
+import os,fnmatch,re,shutil
 from django.conf import settings
 from PIL import Image
 
@@ -274,11 +274,11 @@ def populateMusicDB():
 def convertImages():
 
  # retrieving default context dictionary from settings
- if socket.gethostname() == 'alkalurops':
-  deploy_dir = os.getenv("HOME") + '/misc.rabello.org/'
- else:
+ if os.uname()[0] == 'Darwin':
   deploy_dir = os.path.dirname(__file__) + 'deploy'
- 
+ else:
+  deploy_dir = os.getenv("HOME") + '/misc.rabello.org/'
+
  deploy_static_dir = os.path.join(deploy_dir,'static')
  
  print u"Removing existing deploy dir, if any..."
