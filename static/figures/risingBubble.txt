@@ -1,0 +1,7 @@
+Rising Bubble
+
+3d
+
+03.JUL.2013
+
+Visualization of surface (triangles) and background (tetrahedrons) meshes for two-phase flows simulation of an air bubble in a water-sugar solution using an 3D Finite Element Arbitrary Lagrangian Eulerian code. As can be seen, the background mesh is more refined below the air bubble, where fluid recirculation is stronger, and the surface mesh presents a constant edge lengh along its shape.
