@@ -118,14 +118,16 @@ def populateSaleDB():
 
    obj = line[0].split('\n')[0]
    info = line[2].split('\n')[0]
-   link = line[4].split('\n')[0]
-   original = line[6].split('\n')[0]
-   price = line[8].split('\n')[0]
+   cond = line[4].split('\n')[0]
+   link = line[6].split('\n')[0]
+   original = line[8].split('\n')[0]
+   price = line[10].split('\n')[0]
 
    # saving in the database
    sal = Sale(obj=obj,
               image=filename,
               info=info,
+              cond=cond,
               link=link,
               original=original,
               price=price)
