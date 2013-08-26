@@ -24,16 +24,17 @@
   <div class="{% cycle 'right' 'left' %}">
    <p class="text"> {{ sale.obj }} </p>
    <p class="text2"> info: {{ sale.info }} </p>
+   <p class="text2"> condition: {{ sale.cond }} </p>
 
    <p class="text"> 
-   <a href={{ sale.link }}> plus d'info </a> 
+   <a href={{ sale.link }}> more info </a> 
    </p>
 
 
    <p>&nbsp;</p>
    <p>&nbsp;</p>
-   <p> prix d'achat: CHF {{ sale.original }} </p>
-   <p class="price"> prix: CHF {{ sale.price }} </p>
+   <p> orig price: $ {{ sale.original }} </p>
+   <p class="price"> price: $ {{ sale.price }} </p>
   </div>
 
  </div>
