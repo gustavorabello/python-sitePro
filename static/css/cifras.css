@@ -1,0 +1,77 @@
+/* CIFRAS CONFIG */
+
+{ 
+ height:auto;
+ width:800px; 
+}
+
+p 
+{ 
+ margin: 0.0px 0.0px 0.0px 0.0px; 
+}
+
+p.head1
+{ 
+ font: 45.0px Times;
+ color: blue;
+}
+
+p.head2
+{ 
+ font: 20.0px Times;
+}
+
+p.p1 
+{
+ line-height: 20.0px; 
+ font: 16.0px Courier; 
+ color: #e16b2a
+}
+
+p.p2 
+{
+ line-height: 20.0px; 
+ font: 14.0px Courier; 
+ color: #e16b2a
+ min-height: 14.0px
+}
+
+p.p3
+{
+ line-height: 20.0px; 
+ font: 16.0px Courier; 
+ color: #333333
+ min-height: 14.0px
+}
+
+p.p4 
+{
+ line-height: 19.0px; 
+ font: 12.0px Courier; 
+ color: #e16b2a
+}
+
+p.p5
+{
+ line-height: 19.0px; 
+ font: 12.0px Courier; 
+ color: #333333
+}
+
+p.p6
+{
+ line-height: 19.0px; 
+ font: 12.0px Courier; 
+ color: #333333
+ min-height: 14.0px
+}
+
+span.s1
+{
+ color: #333333
+}
+
+span.s2 
+{
+ color: #e16b2a
+}
