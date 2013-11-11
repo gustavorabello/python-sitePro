@@ -1,0 +1,12 @@
+Topological Remeshing and Locally Supported Smoothing for Bubble Coalescence in Two-Phase Flows
+
+2013
+
+November
+
+COBEM
+
+Congress
+
+A dual strategy of remeshing and smoothing operations is introduced. At the forefront, the Arbitrary Lagrangian-Eulerian/Finite Element (ALE/FE) approach is introduced not only to discretize the continuum filled by the liquid and vapor phases but only to represent their common interface by computational elements. In synchrony, a Level-Set (LS) methodology accompanies the former by determining coalescing regions. This work presents a two-dimensional idealized model concerning the numerical modeling of the coalescence between two circular bubbles immersed in stagnant liquid. While the ALE/FE approach can guarantee suitable remeshing to recover the structure of the mesh modifications changeed after the thin liquid film disruption, the LS strategy locally determines the coalescing region by handling a function of compact support. The effect of the collapse is assuaged and any sharpnesses owing to local topological changes occurring in the contact region tend to be less protruding by smoothing. Two-dimensional numerical results show that this incipient methodology is promising in regard to coalescence studies and is able to be extended, a posteriori, to three-dimensional cases. Mainly headed to treat bubble interactions, these strategies aim to be embodied, in the sequel, into a two-phase flow context, especially to simulate the coalescence taking place in transitional regions of passage from bubbly-to-slug and slug-to-annular patterns.
+

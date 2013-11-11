@@ -1,0 +1,11 @@
+Numerical Simulation of a Periodic Array of Bubbles in a Channel
+
+2013
+
+November
+
+ENIEF
+
+Congress
+
+Flows in micro-channels involving bubbles have important applications in electronic and chemical devices. The numerical simulation of a periodic array of bubbles in a channel is performed us- ing a Semi-Lagrangian Finite Element Method. Interfaces are accurately tracked employing an Arbitrary Lagrangian-Eulerian approach. The methodology for the application of the periodic boundary conditions for this problem is exploited under a finite element context through the overloading of degrees of freedom located at the periodic boundaries. A study of case is performed by considering the initialization of two Taylor bubbles equally shaped and uniformly spaced inside a two-dimensional domain (flat channel) under a moving-frame technique, using a frame moving with the mean velocity of the bubbles. Numerical results supporting the periodic implementation are presented and discussed.
