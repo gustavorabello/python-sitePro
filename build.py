@@ -195,6 +195,9 @@ def populateVideoDB():
  print " *  Adding entries to the database:  * "
  print ""
 
+ #
+ # Add if condition to check internet connection!
+ #
  yt_service = gdata.youtube.service.YouTubeService()
  pl_id = 'A5C4DB7CAE7AF003'
  playlist_video_feed = yt_service.GetYouTubePlaylistVideoFeed(playlist_id=pl_id)
