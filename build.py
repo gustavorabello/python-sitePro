@@ -68,23 +68,20 @@ def populateRecipeDB():
    # spliting base name and extension
    basename = os.path.splitext(arq)[0]
    filename = basename + '.png'
+   infoname = basename + '.html'
      
    fopen = open(dirname+arq,'r')
    line = fopen.readlines()
 
    obj = line[0].split('\n')[0]
-   info = line[2].split('\n')[0]
-   link = line[4].split('\n')[0]
-   original = line[6].split('\n')[0]
-   price = line[8].split('\n')[0]
+   date = line[2].split('\n')[0]
+   info = line[4].split('\n')[0]
 
    # saving in the database
    rec = Recipe(obj=obj,
                 image=filename,
-                info=info,
-                link=link,
-                original=original,
-                price=price)
+                date=date,
+                info=infoname)
   
    print "   " + filename + ' added'
    rec.save()
@@ -375,7 +372,7 @@ def main():
  populateRecipeDB()
  populateMusicDB()
  populateImageDB()
- populateVideoDB()
+ #populateVideoDB()
  populateArticleDB()
 
  # completed build script
