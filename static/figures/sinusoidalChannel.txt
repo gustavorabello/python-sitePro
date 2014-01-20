@@ -1,0 +1,8 @@
+Sinusoidal Channel
+
+3d
+
+20.JAN.2014
+
+Two-phase flow thought a sinusoidal channel. The figure shows the last stage of the mesh manufacturing. It can be seen two distinct structures: the channel and bubble's meshes. The simulation is therefore performed and results on the bubble flow dynamics is achived.
+
