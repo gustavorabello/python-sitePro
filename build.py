@@ -372,7 +372,7 @@ def main():
  populateRecipeDB()
  populateMusicDB()
  populateImageDB()
- #populateVideoDB()
+ populateVideoDB()
  populateArticleDB()
 
  # completed build script
