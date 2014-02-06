@@ -41,16 +41,21 @@
 
 #singleColumn .column1
 { 
+ height:auto;
  width:70px; 
 }
 
 #singleColumn .column2
 { 
+ height:auto;
  width:300px; 
+ padding-left:5px; 
+ padding-right:5px; 
 }
 
 #singleColumn .column3
 { 
+ height:50px;
  width:50px; 
 }
 

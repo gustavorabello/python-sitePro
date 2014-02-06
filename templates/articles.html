@@ -21,13 +21,12 @@
  {% for item in year.list %}
  <table cellpadding="0">
   <tr bgcolor={% cycle 'DarkGray' 'Gray' %}>
-   <td class="column1"> {{ item.month }} </td>
-   <td class="column1"> {{ item.place }} </td>
+   <td class="column1"> {{ item.kind }} </td>
    <td class="column2"> {{ item.title }} </td>
    <td class="column3"> 
-	<div class="left"> <a href="{{ STATIC_URL }}pdf/{{ item.filename }}" target="_blank"> 
+	<div class="left"> <a href="{{ STATIC_URL }}pdf/article-{{ item.number }}.pdf" target="_blank"> 
 	  <img src="{{ STATIC_URL }}thumbs16/pdf-icon.png"> </a> </div>
-	<div class="right"><a href="{{ STATIC_URL }}pdf/{{ item.filename }}" target="_blank"> 
+	<div class="right"><a href="{{ STATIC_URL }}pdf/article-{{ item.number }}.pdf" target="_blank"> 
 	  <img src="{{ STATIC_URL }}thumbs16/ppt-icon.png"> </a> </div> 
    </td>
   </tr>

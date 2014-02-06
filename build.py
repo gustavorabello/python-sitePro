@@ -43,7 +43,7 @@ def populateImageDB():
                date=date,
                text=text)
   
-   print "   " + filename + ' added'
+   print "   " + filename 
    img.save()
 
  print ""
@@ -83,7 +83,7 @@ def populateRecipeDB():
                 date=date,
                 info=infoname)
   
-   print "   " + filename + ' added'
+   print "   " + filename
    rec.save()
 
  print ""
@@ -129,7 +129,7 @@ def populateSaleDB():
               original=original,
               price=price)
   
-   print "   " + filename + ' added'
+   print "   " + filename
    sal.save()
 
  print ""
@@ -139,43 +139,95 @@ def populateSaleDB():
 
 def populateArticleDB():
  from articles.models import Article
-
- dirname = 'static/articles/'
+ import xml.etree.ElementTree as ET
 
  print ""
  print " ************************************* "
  print " *  Adding entries to the database:  * "
  print ""
 
- # loop all files
- for arq in os.listdir(dirname):
+ xmlFile = 'static/misc/cv.xml'
+ encoding = 'latin-1'
 
-  if fnmatch.fnmatch(arq, '*.txt'): 
-   # spliting base name and extension
-   basename = os.path.splitext(arq)[0]
-   filename = basename + '.pdf'
-     
-   fopen = open(dirname+arq,'r')
-   line = fopen.readlines()
+ tree = ET.parse(xmlFile)
+ root = tree.getroot()          # CV
+ bib = tree.find('PRODUCAO-BIBLIOGRAFICA')   # bibliography
 
-   title = line[0].split('\n')[0]
-   year  = line[2].split('\n')[0]
-   month = line[4].split('\n')[0]
-   place = line[6].split('\n')[0]
-   kind  = line[8].split('\n')[0]
-   abstract = line[10].split('\n')[0]
-   
-   # saving in the database
-   art = Article(filename=filename,
-                 year=year,
-                 month=month,
-                 title=title,
-                 place=place,
-                 kind=kind,
-                 abstract=abstract)
+ # Congress papers
+ print "  - Congress paper: "
+ congress = bib[0]
+ for info in congress:
+  number = info.attrib['SEQUENCIA-PRODUCAO']
+  title = info[0].attrib['TITULO-DO-TRABALHO'].encode(encoding)
+  year = info[0].attrib['ANO-DO-TRABALHO']
+  doi = info[0].attrib['DOI']
+  name = info[1].attrib['NOME-DO-EVENTO'].encode(encoding)
+  city = info[1].attrib['CIDADE-DO-EVENTO'].encode(encoding)
+  addinfo = info[-1].attrib['DESCRICAO-INFORMACOES-ADICIONAIS'].encode(encoding)
+
+  # saving in the database
+  art = Article(number=number,
+                title=title,
+                year=year,
+                doi=doi,
+                name=name,
+                kind='congress',
+                city=city,
+                addinfo=addinfo)
+
+  print "    " + title[0:30] + "..."
+  art.save()
+
+ # Book chapters
+ print ""
+ print "  - Book chapter: "
+ chapters = bib[2][0]
+ for info in chapters:
+  number = info.attrib['SEQUENCIA-PRODUCAO']
+  title = info[0].attrib['TITULO-DO-CAPITULO-DO-LIVRO'].encode(encoding)
+  year = info[0].attrib['ANO']
+  country = info[0].attrib['PAIS-DE-PUBLICACAO'].encode(encoding)
+  book = info[1].attrib['TITULO-DO-LIVRO'].encode(encoding)
+  publisher = info[1].attrib['NOME-DA-EDITORA'].encode(encoding)
+  addinfo = info[-1].attrib['DESCRICAO-INFORMACOES-ADICIONAIS'].encode(encoding)
   
-   print "   " + filename + ' added'
-   art.save()
+  # saving in the database
+  art = Article(number=number,
+                title=title,
+                year=year,
+                book=book,
+                name=publisher,
+                publisher=publisher,
+                kind='chapter',
+                country=country,
+                addinfo=addinfo)
+  
+  print "    " + title[0:30] + "..."
+  art.save()
+
+ # Journal papers
+ print ""
+ print "  - Journal paper: "
+ articles = bib[1]
+ for info in articles:
+  number = info.attrib['SEQUENCIA-PRODUCAO']
+  title = info[0].attrib['TITULO-DO-ARTIGO'].encode(encoding)
+  year = info[0].attrib['ANO-DO-ARTIGO']
+  doi = info[0].attrib['DOI']
+  journal = info[1].attrib['TITULO-DO-PERIODICO-OU-REVISTA'].encode(encoding)
+  addinfo = info[-1].attrib['DESCRICAO-INFORMACOES-ADICIONAIS'].encode(encoding)
+
+  # saving in the database
+  art = Article(number=number,
+                title=title,
+                year=year,
+                doi=doi,
+                name=journal,
+                kind='article',
+                addinfo=addinfo)
+
+  print "    " + title[0:30] + "..."
+  art.save()
 
  print ""
  print " *  Entries in the database ADDED:   * "
@@ -210,7 +262,7 @@ def populateVideoDB():
             description=description,
             time=duration)
   
-  print "   " + title + ' added'
+  print "   " + title[0:30] + '...'
   v.save()
     
  print ""
@@ -265,7 +317,7 @@ def populateMusicDB():
                song=songname,
                year=1967)
     
-     print "   " + songname, artist, 1967
+     print "   " + songname, artist
      m.save()
  
  print ""

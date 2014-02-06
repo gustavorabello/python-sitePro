@@ -1,13 +1,18 @@
 from django.db import models
 
 class Article(models.Model):
- filename = models.CharField(max_length=50)
+ number = models.CharField(max_length=10)
  year = models.CharField(max_length=4)
- month = models.CharField(max_length=10)
  title = models.CharField(max_length=500)
+ book = models.CharField(max_length=500)
+ publisher = models.CharField(max_length=500)
  place = models.CharField(max_length=20)
- kind = models.CharField(max_length=20)
- abstract = models.CharField(max_length=5000)
+ name = models.CharField(max_length=20)
+ city = models.CharField(max_length=50)
+ country = models.CharField(max_length=50)
+ kind = models.CharField(max_length=50)
+ addinfo = models.CharField(max_length=10000)
+ doi = models.CharField(max_length=50)
 
  def __unicode__(self):
   return self.abstract
