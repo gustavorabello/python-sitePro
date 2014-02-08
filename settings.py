@@ -125,7 +125,7 @@ THUMBNAIL_SIZE16  = (16,16)
 THUMBNAIL_SIZE32  = (32,32)
 THUMBNAIL_SIZE64  = (64,64)
 THUMBNAIL_SIZE128 = (128,128)
-WEB_WORK = u"http://www.eng.uerj.br/noticias/mostra.php?id=1163598344"
+WEB_WORK = u"http://www.gesar.uerj.br"
 WEB_PERSONAL = u"http://gustavo.rabello.org"
 EMAIL = u"gustavo.rabello@gmail.com"
 PROJECT_NAME = u"gustavo.rabello.org"
