@@ -147,7 +147,7 @@ def populateArticleDB():
  print ""
 
  xmlFile = 'static/misc/cv.xml'
- encoding = 'latin-1'
+ encoding = 'utf-8'
 
  tree = ET.parse(xmlFile)
  root = tree.getroot()          # CV
