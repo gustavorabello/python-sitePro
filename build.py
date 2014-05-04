@@ -198,7 +198,7 @@ def populateArticleDB():
                 book=book,
                 name=publisher,
                 publisher=publisher,
-                kind='chapter',
+                kind='book-chapter',
                 country=country,
                 addinfo=addinfo)
   
@@ -223,7 +223,7 @@ def populateArticleDB():
                 year=year,
                 doi=doi,
                 name=journal,
-                kind='article',
+                kind='journal',
                 addinfo=addinfo)
 
   print "    " + title[0:30] + "..."
