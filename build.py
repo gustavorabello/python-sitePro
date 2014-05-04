@@ -229,6 +229,65 @@ def populateArticleDB():
   print "    " + title[0:30] + "..."
   art.save()
 
+ bib = tree.find('DADOS-GERAIS')[3]  # bibliography
+
+ # UNDERGRAD
+ print ""
+ print "  - Undergraduate project: "
+ grad = bib[0]
+ number = grad.attrib['SEQUENCIA-FORMACAO']
+ title = grad.attrib['TITULO-DO-TRABALHO-DE-CONCLUSAO-DE-CURSO'].encode(encoding)
+ year = grad.attrib['ANO-DE-CONCLUSAO']
+ name = grad.attrib['NOME-INSTITUICAO'].encode(encoding)
+
+ # saving in the database
+ art = Article(number=number,
+               title=title,
+               year=year,
+               name=name,
+               kind='bsc')
+
+ print "    " + title[0:30] + "..."
+ art.save()
+
+ # MSC
+ print ""
+ print "  - Master thesis: "
+ msc = bib[1]
+ number = msc.attrib['SEQUENCIA-FORMACAO']
+ title = msc.attrib['TITULO-DA-DISSERTACAO-TESE'].encode(encoding)
+ year = msc.attrib['ANO-DE-CONCLUSAO']
+ name = msc.attrib['NOME-INSTITUICAO'].encode(encoding)
+
+ # saving in the database
+ art = Article(number=number,
+               title=title,
+               year=year,
+               name=name,
+               kind='msc')
+
+ print "    " + title[0:30] + "..."
+ art.save()
+
+ # PHD
+ print ""
+ print "  - PhD thesis: "
+ phd = bib[2]
+ number = phd.attrib['SEQUENCIA-FORMACAO']
+ title = phd.attrib['TITULO-DA-DISSERTACAO-TESE'].encode(encoding)
+ year = phd.attrib['ANO-DE-CONCLUSAO']
+ name = phd.attrib['NOME-INSTITUICAO'].encode(encoding)
+
+ # saving in the database
+ art = Article(number=number,
+               title=title,
+               year=year,
+               name=name,
+               kind='phd')
+
+ print "    " + title[0:30] + "..."
+ art.save()
+
  print ""
  print " *  Entries in the database ADDED:   * "
  print " ************************************* "
