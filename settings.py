@@ -169,6 +169,7 @@ INSTALLED_APPS = (
     # Added apps:
     'about',
     'research',
+    'education',
     'articles',
     'misc',
     'images',
