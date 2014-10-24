@@ -35,9 +35,18 @@
 #twoColumns h3 
 { 
  margin-top:20px;
+ margin-bottom:10px;
  text-align:left; 
  font-weight:bold; 
- padding-bottom:5px;
+ border-bottom: 1px solid blue;
+}
+
+#twoColumns h4 
+{ 
+ font-size:25px; 
+ margin-top:5px;
+ text-align:left; 
+ font-weight:bold; 
  border-bottom: 1px solid blue;
 }
 

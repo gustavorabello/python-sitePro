@@ -3,7 +3,7 @@
 
 #twoColumns 
 { 
- height:850px;
+ height:900px;
 }
 
 #twoColumns img
@@ -11,9 +11,10 @@
  display:block;
  margin-left:auto;
  margin-right:auto;
+ margin-bottom:20px;
  border-style:solid;
  border-width:3px;
- border-color:blue; 
+ border-color:red; 
 }
 
 #twoColumns ul
