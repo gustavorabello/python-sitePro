@@ -32,6 +32,15 @@
  font-weight:bold; 
 }
 
+#twoColumns h3 
+{ 
+ margin-top:20px;
+ text-align:left; 
+ font-weight:bold; 
+ padding-bottom:5px;
+ border-bottom: 1px solid blue;
+}
+
 #twoColumns p 
 { 
  text-align:justify; 
