@@ -13,12 +13,22 @@
  list-style-type:disc;
  color:red;
  margin-left:50px;
+ padding-left:20px;
 }
 
 #singleColumn a
 { 
  font-family:"Arial", Helvetica, sans-serif;
  letter-spacing:-1px;
+ font-size:20px; 
+ color:black; 
+}
+
+#singleColumn p
+{ 
+ font-family:"Arial", Helvetica, sans-serif;
+ letter-spacing:-1px;
  font-size:25px; 
  color:black; 
+ border-bottom: 1px solid blue;
 }
