@@ -14,22 +14,24 @@
  color:red;
  margin-left:50px;
  padding-left:10px;
+ height:20px;
 }
 
 #singleColumn a
 { 
  font-family:"Arial", Helvetica, sans-serif;
- letter-spacing:-1px;
- font-size:20px; 
+ font-size:16px; 
  color:black; 
 }
 
 #singleColumn p
 { 
- padding-top:10px;
+ padding-top:20px;
  font-family:"Arial", Helvetica, sans-serif;
  letter-spacing:-1px;
  font-size:25px; 
  color:black; 
  border-bottom: 1px solid blue;
 }
+
+
