@@ -34,4 +34,22 @@
  border-bottom: 1px solid blue;
 }
 
+#singleColumn .left
+{ 
+ width:280px; 
+ float:left; 
+ margin-left:0px; 
+ margin-bottom:40px;
+ padding-bottom:20px;
+}
+
+#singleColumn .right
+{ 
+ height:auto;
+ width:320px; 
+ float:right; 
+ margin-right:70px; 
+ margin-bottom:50px;
+ padding-bottom:40px;
+}
 
